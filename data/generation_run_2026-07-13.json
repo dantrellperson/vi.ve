@@ -1,0 +1,392 @@
+{
+ "generated": "2026-07-13",
+ "combos": [
+  {
+   "id": "v01",
+   "label": "pure-morning",
+   "weights": {
+    "morning": 1.0,
+    "out there": 0.0,
+    "sicko mode": 0.0
+   },
+   "key": "Em",
+   "bpm": 71.66,
+   "bar_sources": {
+    "kick": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "snare": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "hat": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "bass": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "melody": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ]
+   }
+  },
+  {
+   "id": "v02",
+   "label": "pure-outthere",
+   "weights": {
+    "morning": 0.0,
+    "out there": 1.0,
+    "sicko mode": 0.0
+   },
+   "key": "Ebm",
+   "bpm": 80.0,
+   "bar_sources": {
+    "kick": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "snare": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "bass": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "melody": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ]
+   }
+  },
+  {
+   "id": "v03",
+   "label": "pure-sickomode",
+   "weights": {
+    "morning": 0.0,
+    "out there": 0.0,
+    "sicko mode": 1.0
+   },
+   "key": "Ebm",
+   "bpm": 77.67,
+   "bar_sources": {
+    "kick": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "clap": [],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "bass": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "melody": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ]
+   }
+  },
+  {
+   "id": "v04",
+   "label": "mor12 out24 sic64",
+   "weights": {
+    "morning": 0.12,
+    "out there": 0.24,
+    "sicko mode": 0.64
+   },
+   "key": "Em",
+   "bpm": 77.51,
+   "bar_sources": {
+    "kick": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "sicko mode",
+     "out there",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "bass": [
+     "sicko mode",
+     "morning",
+     "sicko mode",
+     "morning"
+    ],
+    "melody": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ]
+   }
+  },
+  {
+   "id": "v05",
+   "label": "mor24 out61 sic15",
+   "weights": {
+    "morning": 0.24,
+    "out there": 0.61,
+    "sicko mode": 0.15
+   },
+   "key": "Em",
+   "bpm": 77.65,
+   "bar_sources": {
+    "kick": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "snare": [
+     "sicko mode",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "sicko mode",
+     "morning",
+     "out there",
+     "sicko mode"
+    ],
+    "bass": [
+     "morning",
+     "out there",
+     "morning",
+     "out there"
+    ],
+    "melody": [
+     "out there",
+     "out there",
+     "morning",
+     "morning"
+    ]
+   }
+  },
+  {
+   "id": "v06",
+   "label": "mor41 out35 sic24",
+   "weights": {
+    "morning": 0.41,
+    "out there": 0.35,
+    "sicko mode": 0.24
+   },
+   "key": "Ebm",
+   "bpm": 76.02,
+   "bar_sources": {
+    "kick": [
+     "out there",
+     "out there",
+     "sicko mode",
+     "out there"
+    ],
+    "snare": [
+     "out there",
+     "morning",
+     "morning",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "out there",
+     "morning"
+    ],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "out there",
+     "morning"
+    ],
+    "bass": [
+     "out there",
+     "out there",
+     "out there",
+     "morning"
+    ],
+    "melody": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "out there"
+    ]
+   }
+  },
+  {
+   "id": "v07",
+   "label": "mor10 out51 sic38",
+   "weights": {
+    "morning": 0.1,
+    "out there": 0.51,
+    "sicko mode": 0.38
+   },
+   "key": "Ebm",
+   "bpm": 77.48,
+   "bar_sources": {
+    "kick": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "snare": [
+     "out there",
+     "out there",
+     "out there",
+     "morning"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "morning",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "bass": [
+     "out there",
+     "out there",
+     "out there",
+     "sicko mode"
+    ],
+    "melody": [
+     "sicko mode",
+     "out there",
+     "out there",
+     "out there"
+    ]
+   }
+  },
+  {
+   "id": "v08",
+   "label": "mor36 out14 sic50",
+   "weights": {
+    "morning": 0.36,
+    "out there": 0.14,
+    "sicko mode": 0.5
+   },
+   "key": "Em",
+   "bpm": 75.83,
+   "bar_sources": {
+    "kick": [
+     "morning",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "hat": [
+     "sicko mode",
+     "morning",
+     "sicko mode",
+     "morning"
+    ],
+    "bass": [
+     "morning",
+     "out there",
+     "sicko mode",
+     "morning"
+    ],
+    "melody": [
+     "morning",
+     "sicko mode",
+     "out there",
+     "out there"
+    ]
+   }
+  }
+ ]
+}
