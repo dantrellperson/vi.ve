@@ -200,7 +200,9 @@ Studies found and reviewed against project goals — decisions recorded:
    — `scripts/intra_pack_analysis.py` → `data/intra_pack_metrics.csv` (179 long-format rows)
 6. ✅ Cross-song trends — `scripts/cross_song_trends.py` → `data/style_profile.json`
    (position consensus, shared rhythm n-grams, metric target zones, key relatedness)
-7. ⏳ Postgres schema + writer
+7. ✅ Postgres schema + writer — `scripts/load_postgres.py` → local `vive` database
+   (Postgres.app, port 5431), tables `metrics` (long format + run_date history) and
+   `style_profiles` (jsonb profile per run)
 8. ⏳ Weighted style maps + MIDI generation
 
 ## Recommendations

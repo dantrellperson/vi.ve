@@ -11,8 +11,8 @@ Creates database `vive` (if missing) with two tables:
 Loads : data/intra_pack_metrics.csv, data/cross_song_trends.csv, data/style_profile.json
 Re-running on the same day upserts (no duplicate rows per run_date).
 
-Connection: uses libpq defaults — env vars (PGHOST/PGUSER/PGPASSWORD) and ~/.pgpass.
-No credentials live in this script.
+Connection: Postgres.app on port 5431 (local trust auth — no password, no credentials
+in this script). Override with the PGPORT env var if the server ever moves.
 
 Usage:
     python3 scripts/load_postgres.py            # create schema + load everything
@@ -22,11 +22,15 @@ Usage:
 import argparse
 import csv
 import json
+import os
 from datetime import date
 from pathlib import Path
 
 import psycopg2
 from psycopg2.extras import execute_values
+
+# Postgres.app runs on 5431 on this machine (trust auth, no password needed).
+PGPORT = os.environ.get("PGPORT", "5431")
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 CSV_FILES = ["intra_pack_metrics.csv", "cross_song_trends.csv"]
@@ -58,7 +62,7 @@ CREATE TABLE IF NOT EXISTS style_profiles (
 
 def ensure_database():
     """Create the vive database if it doesn't exist (connects to 'postgres' to do it)."""
-    conn = psycopg2.connect(dbname="postgres")
+    conn = psycopg2.connect(dbname="postgres", port=PGPORT)
     conn.autocommit = True
     with conn.cursor() as cur:
         cur.execute("SELECT 1 FROM pg_database WHERE datname = %s", (DB_NAME,))
@@ -137,7 +141,7 @@ def main():
     args = ap.parse_args()
 
     ensure_database()
-    conn = psycopg2.connect(dbname=DB_NAME)
+    conn = psycopg2.connect(dbname=DB_NAME, port=PGPORT)
     if not args.query:
         load(conn)
     summary(conn)
