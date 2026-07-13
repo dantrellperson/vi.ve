@@ -58,7 +58,7 @@ I broke 3 songs I like down piece by piece and replayed the main parts **by hand
 - Each song features **(2) 4-bar sections**. If a part has no section identifier,
   the pattern is used in both 4-bar sections.
 
-**Current packs (20 files):**
+**Current packs (19 files):**
 
 | Song | Key | BPM | Parts |
 | --- | --- | --- | --- |
@@ -94,13 +94,18 @@ Questions to explore (each becomes a true/false identifier or a measurable facto
 
 ### 3. Metrics / KPIs
 
-Everything measurable gets standardized into factors used to calculate metrics. Candidates so far:
+Everything measurable gets standardized into factors used to calculate metrics.
+**Scoring rule (decided 2026-07-12):** metrics are scored against a **target zone** learned
+from the packs (inverted-U, per Witek), not "higher/lower is better."
 
 | Metric | Definition |
 | --- | --- |
-| **hat-business** | How simplistic or busy the hats are — multiple pitches or one, rolls present, velocity spread |
-| **KTB (kick-to-bass ratio)** | How many times the kick hits relative to the bassline being played |
-| *(more to come from research + analysis)* | |
+| **hat-business** | How simplistic or busy the hats are — unique pitches, roll density, velocity spread |
+| **KTB family** (upgraded from simple ratio) | kick↔bass **hit ratio** + **co-hit rate** (how often they land together) + **lead/lag direction** (who's early, in ticks/ms) + **lag consistency** |
+| **space-ratio** | % of the pattern with nothing sounding — space is recorded as a first-class feature |
+| **syncopation index** | Published formula (Longuet-Higgins & Lee, as used by Witek) per pattern, scored against a style target zone |
+| **groove layer** | Per-note timing deviation (ticks + ms) and velocity vs. the quantized grid — **weighted per style**: low weight for trap/quantized styles, high for neo-soul/melodic parts |
+| **section stability** | What stays constant vs. changes between the (2) 4-bar sections |
 
 ### 4. Weighted style maps → generation
 
@@ -126,6 +131,30 @@ Analysis results are stored in Postgres (local) so scripts can access old analys
 
 ---
 
+## Research Foundations (reviewed 2026-07-12)
+
+Studies found and reviewed against project goals — decisions recorded:
+
+1. **[GrooVAE / Learning to Groove](https://magenta.withgoogle.com/groovae)** (Gillick et al., ICML 2019) —
+   a performance = **score** (quantized pattern) + **groove** (per-note velocity + microtiming
+   deviation). Built on hand-played drum data, same philosophy as midi_university.
+   → **Decision: AGREE.** vi.ve stores every note as grid position + deviation + velocity.
+2. **[Witek et al. 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC3989225/)** — inverted-U between
+   syncopation and pleasure/desire to move; medium syncopation grooves hardest.
+   → **Decision: AGREE.** Metrics get target zones, not directions.
+3. **[Senn et al. 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5050221/)** — quantized versions
+   rated as groovy as human-timed; exaggerated deviations (~25ms+) kill groove.
+   → **Decision: PARTIALLY.** True for trap (quantized hats groove fine); hand-played feel
+   matters in neo-soul/melodic parts. Microtiming weight is **per-style**.
+4. **[Danielsen beat-bin theory](https://academic.oup.com/mts/article/45/2/181/7234305)** (developed
+   on D'Angelo) — the beat has *width*; between-instrument asynchrony (bass dragging the kick)
+   IS the pocket. → **Decision: UPGRADE KTB** to the alignment family above.
+5. **[REMI / MidiTok tokenization](https://github.com/Natooz/MidiTok)** — state-of-the-art MIDI
+   generation treats music literally as language (notes → tokens → sequence models), validating
+   the NLP framing. → n-gram analysis of rhythm phrases is a cheap early win for cross-song trends.
+
+---
+
 ## Key Milestones
 
 ### Failures:
@@ -135,6 +164,8 @@ Analysis results are stored in Postgres (local) so scripts can access old analys
 ### Successes:
 
 - 2026-07-12 — Repo created and pushed to GitHub; project structure established
+- 2026-07-12 — Research review completed; core representation (score/feel split), target-zone
+  scoring, per-style microtiming weights, and KTB upgrade decided
 
 ---
 
@@ -142,10 +173,10 @@ Analysis results are stored in Postgres (local) so scripts can access old analys
 
 1. ✅ Turn vi.ve into a git repository, push to GitHub
 2. ✅ Reorganize readme from mindDump into actionable structure
-3. ⏳ Research: find studies related to pocket/groove quantification, relate them to
+3. ✅ Research: find studies related to pocket/groove quantification, relate them to
    these goals, agree/disagree review, refine metrics
 4. ⏳ `parse_packs.py` — load all 20 MIDIs into a normalized structure
-   (song, part, note events, bar-normalized positions)
+   (song, part, note events, bar-normalized positions, score/feel split)
 5. ⏳ Intra-pack analysis script (kick↔bass relationship, space measurement, section A/B comparison)
 6. ⏳ Postgres schema + writer
 7. ⏳ Weighted style maps + MIDI generation
