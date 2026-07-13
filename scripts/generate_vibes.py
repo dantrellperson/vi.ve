@@ -184,7 +184,8 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest = []
     for combo in combos:
-        rng = random.Random(hash(combo["id"]) & 0xffff)
+        # stable seed so a stored style recipe can regenerate the exact same files
+        rng = random.Random(9000 + int(combo["id"][1:]))
         weights = {s: w for s, w in combo["weights"].items() if w > 0}
 
         target_key = packs[rng.choices(list(weights), list(weights.values()))[0]]["key"]

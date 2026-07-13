@@ -178,13 +178,23 @@ Studies found and reviewed against project goals — decisions recorded:
 
 ### Failures:
 
-*(logged as they happen)*
+- 2026-07-13 — **Trial 01 (bar-collage generation): 0/24 keep rate.** Melodies sound like
+  channel surfing. Root cause isolated in `notebooks/trial_01_review.ipynb`: the melody
+  pool mixes three incompatible sources (dense chord progression / plucky arp / sparse
+  lead) — between-song spread ~2× any other role in density, space, and register.
+  Basslines and drums were NOT the failure. Fix for trial 2: melody must be *generated*
+  from the style grammar, not collaged; bass/drums keep the collage.
 
 ### Successes:
 
 - 2026-07-12 — Repo created and pushed to GitHub; project structure established
 - 2026-07-12 — Research review completed; core representation (score/feel split), target-zone
   scoring, per-style microtiming weights, and KTB upgrade decided
+- 2026-07-13 — **First named style: "Riding Trap"** — a love letter to those who love
+  thumping basslines and riding in the car; basslines live in the sub lane (808s / low
+  register). Exemplar v04, registered in the `styles` Postgres table with a full recipe
+  (weights, key, bpm, per-bar source map) so it can be recreated without re-explaining.
+  Drums validated by ear as complementing the 808.
 
 ---
 
@@ -203,7 +213,12 @@ Studies found and reviewed against project goals — decisions recorded:
 7. ✅ Postgres schema + writer — `scripts/load_postgres.py` → local `vive` database
    (Postgres.app, port 5431), tables `metrics` (long format + run_date history) and
    `style_profiles` (jsonb profile per run)
-8. ⏳ Weighted style maps + MIDI generation
+8. ✅ Weighted style maps + MIDI generation v1 — `scripts/generate_vibes.py` (bar collage),
+   24 files → Trial 01, plus `scripts/register_style.py` + `styles` table (style registry)
+9. ✅ Trial 01 review notebook — `notebooks/trial_01_review.ipynb` (scorecard, Postgres
+   storage tour, root-cause analysis of the melody failure, style registry demo)
+10. ⏳ Trial 02: grammar-based melody generation (motif seed + style-profile vocabulary,
+    one register, target-zone density/space); bass + drums keep the collage engine
 
 ## Recommendations
 
