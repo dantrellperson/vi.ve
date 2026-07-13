@@ -1,0 +1,25 @@
+combo,file,key,bpm,weights,keep (y/n)
+v01,v01 - melody.mid,Em,71.66,morning:1.0 out there:0.0 sicko mode:0.0,n
+v01,v01 - bassline.mid,Em,71.66,morning:1.0 out there:0.0 sicko mode:0.0,n
+v01,v01 - drums.mid,Em,71.66,morning:1.0 out there:0.0 sicko mode:0.0,n
+v02,v02 - melody.mid,Ebm,80,morning:0.0 out there:1.0 sicko mode:0.0,n
+v02,v02 - bassline.mid,Ebm,80,morning:0.0 out there:1.0 sicko mode:0.0,n
+v02,v02 - drums.mid,Ebm,80,morning:0.0 out there:1.0 sicko mode:0.0,n
+v03,v03 - melody.mid,Ebm,77.67,morning:0.0 out there:0.0 sicko mode:1.0,n
+v03,v03 - bassline.mid,Ebm,77.67,morning:0.0 out there:0.0 sicko mode:1.0,n
+v03,v03 - drums.mid,Ebm,77.67,morning:0.0 out there:0.0 sicko mode:1.0,n
+v04,v04 - melody.mid,Em,77.51,morning:0.12 out there:0.24 sicko mode:0.64,n
+v04,v04 - bassline.mid,Em,77.51,morning:0.12 out there:0.24 sicko mode:0.64,n
+v04,v04 - drums.mid,Em,77.51,morning:0.12 out there:0.24 sicko mode:0.64,n
+v05,v05 - melody.mid,Em,77.65,morning:0.24 out there:0.61 sicko mode:0.15,n
+v05,v05 - bassline.mid,Em,77.65,morning:0.24 out there:0.61 sicko mode:0.15,n
+v05,v05 - drums.mid,Em,77.65,morning:0.24 out there:0.61 sicko mode:0.15,n
+v06,v06 - melody.mid,Ebm,76.02,morning:0.41 out there:0.35 sicko mode:0.24,n
+v06,v06 - bassline.mid,Ebm,76.02,morning:0.41 out there:0.35 sicko mode:0.24,n
+v06,v06 - drums.mid,Ebm,76.02,morning:0.41 out there:0.35 sicko mode:0.24,n
+v07,v07 - melody.mid,Ebm,77.48,morning:0.1 out there:0.51 sicko mode:0.38,n
+v07,v07 - bassline.mid,Ebm,77.48,morning:0.1 out there:0.51 sicko mode:0.38,n
+v07,v07 - drums.mid,Ebm,77.48,morning:0.1 out there:0.51 sicko mode:0.38,n
+v08,v08 - melody.mid,Em,75.83,morning:0.36 out there:0.14 sicko mode:0.5,n
+v08,v08 - bassline.mid,Em,75.83,morning:0.36 out there:0.14 sicko mode:0.5,n
+v08,v08 - drums.mid,Em,75.83,morning:0.36 out there:0.14 sicko mode:0.5,n

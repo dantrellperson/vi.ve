@@ -217,7 +217,7 @@ Studies found and reviewed against project goals — decisions recorded:
    24 files → Trial 01, plus `scripts/register_style.py` + `styles` table (style registry)
 9. ✅ Trial 01 review notebook — `notebooks/trial_01_review.ipynb` (scorecard, Postgres
    storage tour, root-cause analysis of the melody failure, style registry demo)
-10. ⏳ Trial 02: grammar-based melody generation (motif seed + style-profile vocabulary,
+10. ✅ Trial 02 generator built — `scripts/generate_vibes_v2.py` (motif AA'BA melody engine,
     one register, target-zone density/space); bass + drums keep the collage engine
 
 ## Recommendations
