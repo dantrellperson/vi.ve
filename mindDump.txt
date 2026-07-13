@@ -1,0 +1,43 @@
+I want to create scripts that will eventually come together as my own personal assistant music producer. First read the README in the trell_music_life folder, the read the rest
+
+- I have created 3 packs of midi files at this location: /Users/trell/Music/Ableton/User Library/midi_university
+    -  I broke 3 songs I like down piece by piece and replayed the main parts of the song by hand, the midi pack folders each follow the following naming convention: song title —> key —> bpm
+        - Inside of these packs, the midi files follow this naming convention: song title —> part of song being played, e.g. “ morning - bass line” or “morning - kick”
+            - instruments that have more than one unique pattern with a song will include an additional identifier after the song title that is usually identifying which part of the song this pattern plays, e.g. “out there - chorus bass line
+        - Each of the songs feature (2) 4-bar sections, if the part of the song doesn’t have an additional identifier after the song title, it’s safe to assume that pattern is used during both 4 bar sections
+- These midi packs will need to be analyzed in several ways till we have established a method for defining a pocket.
+- Some ways I thought of to analyze the tracks:
+    - Intra-midi pack analysis:
+        - We need to analyze how each part of the songs compliment each other:
+            - Example questions that I want to explore in the analysis:
+                - Does the kick follow the bass line?
+                - Does the kick sometimes play notes leading into a bass line hit?
+                - Does the kick hit every time a note from the bass line plays?
+                - How does the bass line follow/complement the chord progression or melody?
+                - How much space is being left between notes?
+                - Are sections of the hihat pattern doing rolls before another instrument does something?
+                - what are the parts of each pattern that don’t change across the (2) 4-bar sections?
+                    - What parts do change?
+        - We need to mathematically record the empty space along with how the patterns for each instrument are  constructed
+            - Space is actually just as important to the “pocket” as whats being played, space in a track allows the artists’ brains to decide how to rap or sing on a track
+        - We need to mathematically record the trends instruments follow across songs
+            - This helps us establish style and pocket
+                - e.g., “a hihat roll always plays right before the 3rd beat when counting like 1-e-and-ah 2-e-and-ah 3-e-and-ah 4-e-and-ah etc”
+        - We need to record how relatively close/related each key of each song is
+- The established questions will get turned into true/false identifiers and anything we find a way to mathematically record we still standardize into factors that we use to calculate metrics/kpi 
+    - When I think of a metric/kpi that can be created, I think of something like:
+        -  hat-business: the measure of how simplistic or busy your hats are (i.e. are there multiple notes used or all one note, are there rolls, what about the velocity
+        - KTB (kick-to-bass ratio): How many times does the kick hit relative to bass drum being played
+- We will use everything we record, measure, observe to form a sort of directional map that helps create midi patterns
+    - Each map will weight the different variables/factors we created for each pattern and song then make the song more like whichever variables are more heavier weighted, the weights should equal 1
+        - For example the kick pattern from “morning” could be weighted 0.3, but the style of sicko mode can be weighted 0.4
+- After we generate information we will store it in postgres, this way the script can store old analysis.
+    - The postgres table on my laptop should be in long format, there should be: a song column, style column, a metric/kpi column that contains text labels that identify which metric the observed row is referencing 
+    - This database will be a powerful tool of music creation once setup 
+
+- I’ll want to track this in my github
+    - my git: https://github.com/dantrellperson
+    - after you’ve caught up on all the initial info, before we start working turn the vive folder inside trell_music_life into a repository and push it to my git
+- All of this is my rough mind dump when I wanted to get my thoughts out, so i’ll need help organizing my thoughts, creating observable actionable deliverables, making objectives more clear, clar
+    - i’ve already started a readme for vive so the structure can be there, then we’l continue to improve upon the readme and make regular commits when significant work has been done 
+￼
