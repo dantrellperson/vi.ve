@@ -46,8 +46,14 @@ Yellowbrick, Seaborn, Gradient Descent, PostgreSQL
 
 Location: `/Users/trell/Music/Ableton/User Library/midi_university/`
 
-I broke 3 songs I like down piece by piece and replayed the main parts **by hand**
-(so the human timing/velocity is preserved — this is the ground truth for pocket).
+I broke 3 songs I like down piece by piece and replayed the main parts **by hand**.
+
+> **Provenance note (2026-07-12):** these first 3 packs were created mostly by drawing and
+> by using the laptop keyboard as a MIDI piano (real MIDI keyboard cable is broken). So
+> **velocity is not scoreable** for most files — parser analysis confirmed 15 of 19 files
+> sit at one constant velocity. Exceptions with real velocity data:
+> `morning - chord progression` (41–95) and `morning - hihat` (23–127).
+> Timing: kicks/snares/claps/basslines are quantized; hats and melodies carry real deviation.
 
 **Naming conventions:**
 
@@ -116,6 +122,19 @@ Everything recorded, measured, and observed forms a **directional map** for crea
 - **Weights must sum to 1** — e.g., the kick pattern from "morning" at `0.3` + the style
   of "sicko mode" at `0.4` + …
 
+### 4b. Default variables for missing channels
+
+When a file lacks usable information in a channel (flat velocity, fully quantized timing),
+the final style map must not learn from garbage — it falls back to **style defaults**:
+
+- Every feature channel gets a **reliability flag** computed from the data
+  (e.g., `velocity_reliable = False` when a file is one constant velocity)
+- Unreliable channels are excluded from learned style weights
+- Generation substitutes defaults from `config/style_defaults.json`
+  (starter values pulled from confirmed production principles — e.g., hats velocity 30–118,
+  ghost kicks 50–70, microtiming deviation capped ~25 ms per the Senn findings)
+- Defaults are per instrument role, editable as taste evolves
+
 ### 5. Storage — PostgreSQL
 
 Analysis results are stored in Postgres (local) so scripts can access old analysis.
@@ -177,7 +196,8 @@ Studies found and reviewed against project goals — decisions recorded:
    these goals, agree/disagree review, refine metrics
 4. ⏳ `parse_packs.py` — load all 20 MIDIs into a normalized structure
    (song, part, note events, bar-normalized positions, score/feel split)
-5. ⏳ Intra-pack analysis script (kick↔bass relationship, space measurement, section A/B comparison)
+5. ✅ Intra-pack analysis script (kick↔bass relationship, space measurement, section A/B comparison)
+   — `scripts/intra_pack_analysis.py` → `data/intra_pack_metrics.csv` (179 long-format rows)
 6. ⏳ Postgres schema + writer
 7. ⏳ Weighted style maps + MIDI generation
 

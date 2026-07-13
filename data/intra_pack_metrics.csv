@@ -1,0 +1,180 @@
+song,style,scope,metric,value
+morning,hip-hop,bassline,space_ratio,0.0
+morning,hip-hop,bassline,onset_density_per_bar,5.25
+morning,hip-hop,bassline,velocity_reliable,0
+morning,hip-hop,bassline,timing_played,1
+morning,hip-hop,bassline,mean_abs_deviation_ms,2.91
+morning,hip-hop,bassline,longest_gap_beats,1.5
+morning,hip-hop,bassline,syncopation_lhl,0.905
+morning,hip-hop,chord progression,space_ratio,0.0163
+morning,hip-hop,chord progression,onset_density_per_bar,30.0
+morning,hip-hop,chord progression,velocity_reliable,1
+morning,hip-hop,chord progression,timing_played,1
+morning,hip-hop,chord progression,mean_abs_deviation_ms,27.26
+morning,hip-hop,chord progression,longest_gap_beats,3.85
+morning,hip-hop,chord progression,syncopation_lhl,0.387
+morning,hip-hop,clap,space_ratio,0.9505
+morning,hip-hop,clap,onset_density_per_bar,2.0
+morning,hip-hop,clap,velocity_reliable,0
+morning,hip-hop,clap,timing_played,0
+morning,hip-hop,clap,mean_abs_deviation_ms,0.0
+morning,hip-hop,clap,longest_gap_beats,2.0
+morning,hip-hop,clap,syncopation_lhl,1.5
+morning,hip-hop,hihat,space_ratio,0.6966
+morning,hip-hop,hihat,onset_density_per_bar,20.0
+morning,hip-hop,hihat,velocity_reliable,1
+morning,hip-hop,hihat,timing_played,1
+morning,hip-hop,hihat,mean_abs_deviation_ms,16.35
+morning,hip-hop,hihat,longest_gap_beats,0.71
+morning,hip-hop,hihat,syncopation_lhl,0.414
+morning,hip-hop,hihat,hat_business,0.773
+morning,hip-hop,hihat,roll_count,7
+morning,hip-hop,hihat,rolls_per_4_bars,7.0
+morning,hip-hop,hihat,roll_resolves_into_hit_rate,0.43
+morning,hip-hop,kick,space_ratio,0.8887
+morning,hip-hop,kick,onset_density_per_bar,5.0
+morning,hip-hop,kick,velocity_reliable,0
+morning,hip-hop,kick,timing_played,0
+morning,hip-hop,kick,mean_abs_deviation_ms,0.0
+morning,hip-hop,kick,longest_gap_beats,1.5
+morning,hip-hop,kick,syncopation_lhl,0.95
+morning,hip-hop,snare,space_ratio,0.9701
+morning,hip-hop,snare,onset_density_per_bar,1.5
+morning,hip-hop,snare,velocity_reliable,0
+morning,hip-hop,snare,timing_played,0
+morning,hip-hop,snare,mean_abs_deviation_ms,0.0
+morning,hip-hop,snare,longest_gap_beats,4.0
+morning,hip-hop,snare,syncopation_lhl,1.667
+morning,hip-hop,kick|bassline,ktb_hit_ratio,0.95
+morning,hip-hop,kick|bassline,ktb_co_hit_rate,0.95
+morning,hip-hop,kick|bassline,ktb_lead_in_rate,0.24
+morning,hip-hop,kick|bassline,ktb_mean_lag_ticks,-0.05
+morning,hip-hop,kick|bassline,ktb_mean_lag_ms,-0.44
+morning,hip-hop,kick|bassline,ktb_lag_std_ticks,0.83
+morning,hip-hop,bassline|chord progression,bass_chord_tone_rate,1.0
+morning,hip-hop,bassline|chord progression,bass_on_root_rate,0.86
+out there,hip-hop,chorus bassline,space_ratio,0.0
+out there,hip-hop,chorus bassline,onset_density_per_bar,0.5
+out there,hip-hop,chorus bassline,velocity_reliable,0
+out there,hip-hop,chorus bassline,timing_played,0
+out there,hip-hop,chorus bassline,mean_abs_deviation_ms,0.0
+out there,hip-hop,chorus bassline,longest_gap_beats,8.0
+out there,hip-hop,chorus bassline,syncopation_lhl,0.0
+out there,hip-hop,clap,space_ratio,0.875
+out there,hip-hop,clap,onset_density_per_bar,2.0
+out there,hip-hop,clap,velocity_reliable,0
+out there,hip-hop,clap,timing_played,0
+out there,hip-hop,clap,mean_abs_deviation_ms,0.0
+out there,hip-hop,clap,longest_gap_beats,2.0
+out there,hip-hop,clap,syncopation_lhl,1.5
+out there,hip-hop,hihat,space_ratio,0.0
+out there,hip-hop,hihat,onset_density_per_bar,18.0
+out there,hip-hop,hihat,velocity_reliable,1
+out there,hip-hop,hihat,timing_played,1
+out there,hip-hop,hihat,mean_abs_deviation_ms,10.42
+out there,hip-hop,hihat,longest_gap_beats,0.25
+out there,hip-hop,hihat,syncopation_lhl,0.0
+out there,hip-hop,hihat,hat_business,0.349
+out there,hip-hop,hihat,roll_count,4
+out there,hip-hop,hihat,rolls_per_4_bars,4.0
+out there,hip-hop,hihat,roll_resolves_into_hit_rate,0.0
+out there,hip-hop,kick,space_ratio,0.6562
+out there,hip-hop,kick,onset_density_per_bar,4.5
+out there,hip-hop,kick,velocity_reliable,0
+out there,hip-hop,kick,timing_played,0
+out there,hip-hop,kick,mean_abs_deviation_ms,0.0
+out there,hip-hop,kick,longest_gap_beats,1.5
+out there,hip-hop,kick,syncopation_lhl,0.889
+out there,hip-hop,snare,space_ratio,0.9583
+out there,hip-hop,snare,onset_density_per_bar,0.5
+out there,hip-hop,snare,velocity_reliable,0
+out there,hip-hop,snare,timing_played,0
+out there,hip-hop,snare,mean_abs_deviation_ms,0.0
+out there,hip-hop,snare,longest_gap_beats,8.0
+out there,hip-hop,snare,syncopation_lhl,2.0
+out there,hip-hop,verse bassline,space_ratio,0.0
+out there,hip-hop,verse bassline,onset_density_per_bar,5.5
+out there,hip-hop,verse bassline,velocity_reliable,0
+out there,hip-hop,verse bassline,timing_played,0
+out there,hip-hop,verse bassline,mean_abs_deviation_ms,0.0
+out there,hip-hop,verse bassline,longest_gap_beats,2.0
+out there,hip-hop,verse bassline,syncopation_lhl,0.273
+out there,hip-hop,verse keys,space_ratio,0.4089
+out there,hip-hop,verse keys,onset_density_per_bar,10.0
+out there,hip-hop,verse keys,velocity_reliable,0
+out there,hip-hop,verse keys,timing_played,0
+out there,hip-hop,verse keys,mean_abs_deviation_ms,0.0
+out there,hip-hop,verse keys,longest_gap_beats,1.5
+out there,hip-hop,verse keys,syncopation_lhl,0.1
+out there,hip-hop,kick|chorus bassline,ktb_hit_ratio,9.0
+out there,hip-hop,kick|chorus bassline,ktb_co_hit_rate,1.0
+out there,hip-hop,kick|chorus bassline,ktb_lead_in_rate,0.5
+out there,hip-hop,kick|chorus bassline,ktb_mean_lag_ticks,0.0
+out there,hip-hop,kick|chorus bassline,ktb_mean_lag_ms,0.0
+out there,hip-hop,kick|chorus bassline,ktb_lag_std_ticks,0.0
+out there,hip-hop,kick|verse bassline,ktb_hit_ratio,0.82
+out there,hip-hop,kick|verse bassline,ktb_co_hit_rate,0.64
+out there,hip-hop,kick|verse bassline,ktb_lead_in_rate,0.5
+out there,hip-hop,kick|verse bassline,ktb_mean_lag_ticks,0.0
+out there,hip-hop,kick|verse bassline,ktb_mean_lag_ms,0.0
+out there,hip-hop,kick|verse bassline,ktb_lag_std_ticks,0.0
+out there,hip-hop,verse bassline|keys,bass_chord_tone_rate,0.53
+out there,hip-hop,verse bassline|keys,bass_on_root_rate,0.0
+out there,hip-hop,verse bassline|chorus bassline,section_stability,0.09
+out there,hip-hop,verse bassline|chorus bassline,steps_only_in_A,20
+out there,hip-hop,verse bassline|chorus bassline,steps_only_in_B,0
+sicko mode,hip-hop,bassline,space_ratio,0.0
+sicko mode,hip-hop,bassline,onset_density_per_bar,6.0
+sicko mode,hip-hop,bassline,velocity_reliable,0
+sicko mode,hip-hop,bassline,timing_played,0
+sicko mode,hip-hop,bassline,mean_abs_deviation_ms,0.0
+sicko mode,hip-hop,bassline,longest_gap_beats,0.75
+sicko mode,hip-hop,bassline,syncopation_lhl,1.5
+sicko mode,hip-hop,brkdwn melody,space_ratio,0.2526
+sicko mode,hip-hop,brkdwn melody,onset_density_per_bar,6.0
+sicko mode,hip-hop,brkdwn melody,velocity_reliable,0
+sicko mode,hip-hop,brkdwn melody,timing_played,1
+sicko mode,hip-hop,brkdwn melody,mean_abs_deviation_ms,8.05
+sicko mode,hip-hop,brkdwn melody,longest_gap_beats,1.0
+sicko mode,hip-hop,brkdwn melody,syncopation_lhl,0.0
+sicko mode,hip-hop,hihat,space_ratio,0.6706
+sicko mode,hip-hop,hihat,onset_density_per_bar,16.5
+sicko mode,hip-hop,hihat,velocity_reliable,0
+sicko mode,hip-hop,hihat,timing_played,1
+sicko mode,hip-hop,hihat,mean_abs_deviation_ms,10.49
+sicko mode,hip-hop,hihat,longest_gap_beats,0.28
+sicko mode,hip-hop,hihat,syncopation_lhl,0.0
+sicko mode,hip-hop,hihat,hat_business,0.5
+sicko mode,hip-hop,hihat,roll_count,2
+sicko mode,hip-hop,hihat,rolls_per_4_bars,2.0
+sicko mode,hip-hop,hihat,roll_resolves_into_hit_rate,1.0
+sicko mode,hip-hop,kick,space_ratio,0.8564
+sicko mode,hip-hop,kick,onset_density_per_bar,6.12
+sicko mode,hip-hop,kick,velocity_reliable,0
+sicko mode,hip-hop,kick,timing_played,0
+sicko mode,hip-hop,kick,mean_abs_deviation_ms,0.0
+sicko mode,hip-hop,kick,longest_gap_beats,0.75
+sicko mode,hip-hop,kick,syncopation_lhl,1.5
+sicko mode,hip-hop,main melody,space_ratio,0.0859
+sicko mode,hip-hop,main melody,onset_density_per_bar,8.0
+sicko mode,hip-hop,main melody,velocity_reliable,0
+sicko mode,hip-hop,main melody,timing_played,1
+sicko mode,hip-hop,main melody,mean_abs_deviation_ms,16.09
+sicko mode,hip-hop,main melody,longest_gap_beats,0.56
+sicko mode,hip-hop,main melody,syncopation_lhl,0.0
+sicko mode,hip-hop,snare,space_ratio,0.9297
+sicko mode,hip-hop,snare,onset_density_per_bar,3.0
+sicko mode,hip-hop,snare,velocity_reliable,0
+sicko mode,hip-hop,snare,timing_played,0
+sicko mode,hip-hop,snare,mean_abs_deviation_ms,0.0
+sicko mode,hip-hop,snare,longest_gap_beats,2.0
+sicko mode,hip-hop,snare,syncopation_lhl,1.333
+sicko mode,hip-hop,kick|bassline,ktb_hit_ratio,1.02
+sicko mode,hip-hop,kick|bassline,ktb_co_hit_rate,1.0
+sicko mode,hip-hop,kick|bassline,ktb_lead_in_rate,0.17
+sicko mode,hip-hop,kick|bassline,ktb_mean_lag_ticks,0.0
+sicko mode,hip-hop,kick|bassline,ktb_mean_lag_ms,0.0
+sicko mode,hip-hop,kick|bassline,ktb_lag_std_ticks,0.0
+sicko mode,hip-hop,kick,section_stability,1.0
+sicko mode,hip-hop,kick,steps_only_in_A,0
+sicko mode,hip-hop,kick,steps_only_in_B,0

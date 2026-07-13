@@ -1,0 +1,30 @@
+{
+  "_comment": "Fallback values used by the style map when a file's channel is unreliable (flat velocity, quantized timing). Starter values come from Trell's confirmed production principles in trell_music_life/README.md. Edit freely as taste evolves.",
+  "velocity": {
+    "hihat": {"min": 30, "max": 118, "shape": "wide spread, accents on downbeats"},
+    "kick": {"min": 100, "max": 127, "ghost_min": 50, "ghost_max": 70},
+    "snare": {"min": 95, "max": 120},
+    "clap": {"min": 95, "max": 120},
+    "bass": {"min": 90, "max": 115},
+    "chords": {"min": 41, "max": 95, "shape": "learned from morning - chord progression"},
+    "melody": {"min": 70, "max": 110}
+  },
+  "microtiming": {
+    "max_deviation_ms": 25,
+    "_why": "Senn et al. 2016: deviations ~25ms+ reliably lowered groove ratings",
+    "per_style_weight": {
+      "trap": 0.1,
+      "neo-soul": 0.6,
+      "melodic": 0.5,
+      "_why": "Trell decision 2026-07-12: quantized hats groove fine in trap; hand-played feel matters in neo-soul/melodic parts"
+    }
+  },
+  "rolls": {
+    "subdivision": "32nd-triplet",
+    "max_per_4_bars": 1,
+    "_why": "constant rolls = arpeggiator sound; 1 roll per 4 bars is right"
+  },
+  "layering": {
+    "snare_clap_offset_ticks": 5
+  }
+}
