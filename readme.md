@@ -198,9 +198,25 @@ Studies found and reviewed against project goals — decisions recorded:
    (song, part, note events, bar-normalized positions, score/feel split)
 5. ✅ Intra-pack analysis script (kick↔bass relationship, space measurement, section A/B comparison)
    — `scripts/intra_pack_analysis.py` → `data/intra_pack_metrics.csv` (179 long-format rows)
-6. ⏳ Postgres schema + writer
-7. ⏳ Weighted style maps + MIDI generation
+6. ✅ Cross-song trends — `scripts/cross_song_trends.py` → `data/style_profile.json`
+   (position consensus, shared rhythm n-grams, metric target zones, key relatedness)
+7. ⏳ Postgres schema + writer
+8. ⏳ Weighted style maps + MIDI generation
 
 ## Recommendations
 
-*(filled in as analysis produces findings)*
+First findings from cross-song analysis (2026-07-12):
+
+- **The kick grammar is the tresillo.** The dotted-8th chain (IOI `[3,3]` in 16ths) is the
+  #1 shared kick phrase in ALL 3 songs (36 occurrences). Universal kick positions: the 1,
+  2-and, 3-and, 4-e — the 1 plus syncopated offbeats. Generation should build kicks from
+  tresillo cells, not from a straight grid.
+- **Bass shares the kick's DNA**: universal positions 1, 3-and, 4-e with `[3,1]`/`[3,3]`
+  phrases — consistent with the high kick↔bass co-hit rates (0.64–1.0).
+- **Hats are position-agnostic**: every 16th position is used in all 3 songs. Hat style
+  lives in rolls + velocity, not placement — so hat generation cares about the groove
+  layer, kick/bass generation cares about the score layer.
+- **Snare placement is song-specific** (zero universal positions) — a free variable per
+  song, while claps lean on 2 and 4.
+- **Key spread**: out there & sicko mode are the same key (Ebm); morning (Em) is
+  1 semitone but 5 circle-of-fifths steps away — semitone-close ≠ harmonically close.
