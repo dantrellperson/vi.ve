@@ -187,6 +187,13 @@ Studies found and reviewed against project goals — decisions recorded:
 
 ### Successes:
 
+- 2026-07-13 — **Trial 02 (grammar melody + collage bass/drums): 11/24 kept (46%) vs 0/24.**
+  Drums 5/8, basslines 4/8, melodies 2/8 — and kept melodies only "in the direction of
+  usable." Key patterns: melody keeps happened ONLY on pure single-song combos (blended
+  vocab still mixes dialects); v03 pure-sicko was the first fully-kept pack (3/3);
+  combos v04–v06 were rejected wholesale, suggesting a cross-role coherence problem in
+  blends beyond just melody. Verdicts accumulate in the `trial_results` Postgres table.
+
 - 2026-07-12 — Repo created and pushed to GitHub; project structure established
 - 2026-07-12 — Research review completed; core representation (score/feel split), target-zone
   scoring, per-style microtiming weights, and KTB upgrade decided
