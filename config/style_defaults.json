@@ -27,6 +27,14 @@
   "layering": {
     "snare_clap_offset_ticks": 5
   },
+  "bass_808_frame": {
+    "tuning": "808 audio sample, root at middle C = C3 = MIDI 60 (Ableton naming); deliver basslines in this frame, no manual pitching",
+    "lane_median": [56, 69],
+    "bar1_ceiling": "most of bar 1 never a full octave+ above middle C — notes above C4 (71+) fold down",
+    "bar_endings": "never exactly one octave below the root; finish on the root, or the b7 if the bar begins on the root",
+    "retired_structure": "a bar whose notes ALL sit >= root+7 (the out-there counter shape: +8, octave, octave, octave, +5) — fold alternating notes down an octave to create intra-bar bounce (e.g. D4->D3, C4->C3 against A3)",
+    "_why": "Trell evolved standards 2026-07-13 after trial 06: every wrong-lane bassline mark relates to these rules"
+  },
   "bass_register_shape": {
     "loop_must_end_low": true,
     "bounce": "shifting between high and low registers back/forth creates bounce",

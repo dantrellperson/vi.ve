@@ -1,0 +1,33 @@
+combo,file,key,bpm,weights,keep (y/n),ehh (y/n),cream (y/n),fixable (y/n),too busy (y/n),too empty (y/n),too random (y/n),too repetitive (y/n),robotic (y/n),wrong lane (y/n),bad landing (y/n),gels (y/n),rides (y/n),song worthy (y/n)
+t6 v01,t6 v01 - melody.mid,Ebm,77.22,morning:0.25 out there:0.45 sicko mode:0.3,y,y,n,y,n,n,n,n,n,n,n,n,n,n
+t6 v01,t6 v01 - bassline.mid,Ebm,77.22,morning:0.25 out there:0.45 sicko mode:0.3,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v01,t6 v01 - drums.mid,Ebm,77.22,morning:0.25 out there:0.45 sicko mode:0.3,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v01,WHOLE PACK,Ebm,77.22,morning:0.25 out there:0.45 sicko mode:0.3,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v02,t6 v02 - melody.mid,Em,78.78,morning:0.09 out there:0.71 sicko mode:0.2,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v02,t6 v02 - bassline.mid,Em,78.78,morning:0.09 out there:0.71 sicko mode:0.2,n,y,n,y,n,n,n,n,n,y,n,n,n,n
+t6 v02,t6 v02 - drums.mid,Em,78.78,morning:0.09 out there:0.71 sicko mode:0.2,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v02,WHOLE PACK,Em,78.78,morning:0.09 out there:0.71 sicko mode:0.2,n,y,n,y,n,n,n,n,n,y,n,n,n,n
+t6 v03,t6 v03 - melody.mid,Em,76.72,morning:0.24 out there:0.21 sicko mode:0.55,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v03,t6 v03 - bassline.mid,Em,76.72,morning:0.24 out there:0.21 sicko mode:0.55,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v03,t6 v03 - drums.mid,Em,76.72,morning:0.24 out there:0.21 sicko mode:0.55,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v03,WHOLE PACK,Em,76.72,morning:0.24 out there:0.21 sicko mode:0.55,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v04,t6 v04 - melody.mid,Ebm,76.53,morning:0.29 out there:0.26 sicko mode:0.45,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v04,t6 v04 - bassline.mid,Ebm,76.53,morning:0.29 out there:0.26 sicko mode:0.45,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v04,t6 v04 - drums.mid,Ebm,76.53,morning:0.29 out there:0.26 sicko mode:0.45,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v04,WHOLE PACK,Ebm,76.53,morning:0.29 out there:0.26 sicko mode:0.45,n,y,n,y,n,n,n,n,n,y,y,n,n,n
+t6 v05,t6 v05 - melody.mid,Ebm,75.7,morning:0.5 out there:0.11 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v05,t6 v05 - bassline.mid,Ebm,75.7,morning:0.5 out there:0.11 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v05,t6 v05 - drums.mid,Ebm,75.7,morning:0.5 out there:0.11 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v05,WHOLE PACK,Ebm,75.7,morning:0.5 out there:0.11 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v06,t6 v06 - melody.mid,Ebm,77.01,morning:0.21 out there:0.26 sicko mode:0.53,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v06,t6 v06 - bassline.mid,Ebm,77.01,morning:0.21 out there:0.26 sicko mode:0.53,n,y,n,y,n,n,n,y,n,y,y,n,n,n
+t6 v06,t6 v06 - drums.mid,Ebm,77.01,morning:0.21 out there:0.26 sicko mode:0.53,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v06,WHOLE PACK,Ebm,77.01,morning:0.21 out there:0.26 sicko mode:0.53,n,y,n,y,n,n,n,y,n,y,y,n,n,n
+t6 v07,t6 v07 - melody.mid,Ebm,78.5,morning:0.24 out there:0.64 sicko mode:0.13,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v07,t6 v07 - bassline.mid,Ebm,78.5,morning:0.24 out there:0.64 sicko mode:0.13,n,y,n,y,n,n,n,y,n,y,y,n,n,n
+t6 v07,t6 v07 - drums.mid,Ebm,78.5,morning:0.24 out there:0.64 sicko mode:0.13,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v07,WHOLE PACK,Ebm,78.5,morning:0.24 out there:0.64 sicko mode:0.13,n,y,n,y,n,n,n,y,n,y,y,n,n,n
+t6 v08,t6 v08 - melody.mid,Ebm,78.48,morning:0.07 out there:0.53 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v08,t6 v08 - bassline.mid,Ebm,78.48,morning:0.07 out there:0.53 sicko mode:0.4,n,y,n,y,y,n,y,y,n,y,y,n,n,n
+t6 v08,t6 v08 - drums.mid,Ebm,78.48,morning:0.07 out there:0.53 sicko mode:0.4,y,n,y,n,n,n,n,n,n,n,n,y,y,y
+t6 v08,WHOLE PACK,Ebm,78.48,morning:0.07 out there:0.53 sicko mode:0.4,n,y,n,y,y,n,y,y,n,y,y,n,n,n
