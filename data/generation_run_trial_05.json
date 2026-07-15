@@ -1,0 +1,334 @@
+{
+ "generated": "2026-07-15",
+ "trial": 5,
+ "combos": [
+  {
+   "id": "v01",
+   "label": "v04weights-rerun-a",
+   "trial": 5,
+   "weights": {
+    "morning": 0.12,
+    "out there": 0.24,
+    "sicko mode": 0.64
+   },
+   "key": "Ebm",
+   "bpm": 77.51,
+   "melody_vocabulary": "sicko mode",
+   "bass_register_by_bar": "39 46 39 38",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "out there",
+     "morning",
+     "morning"
+    ],
+    "snare": [
+     "sicko mode",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "sicko mode",
+     "morning",
+     "sicko mode"
+    ],
+    "melody": "grammar-v4, vocabulary = sicko mode"
+   }
+  },
+  {
+   "id": "v02",
+   "label": "v04weights-rerun-b",
+   "trial": 5,
+   "weights": {
+    "morning": 0.12,
+    "out there": 0.24,
+    "sicko mode": 0.64
+   },
+   "key": "Ebm",
+   "bpm": 77.51,
+   "melody_vocabulary": "sicko mode",
+   "bass_register_by_bar": "39 39 51 29",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "out there",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "melody": "grammar-v4, vocabulary = sicko mode"
+   }
+  },
+  {
+   "id": "v03",
+   "label": "v05weights-rerun",
+   "trial": 5,
+   "weights": {
+    "morning": 0.24,
+    "out there": 0.61,
+    "sicko mode": 0.15
+   },
+   "key": "Em",
+   "bpm": 77.65,
+   "melody_vocabulary": "sicko mode",
+   "bass_register_by_bar": "40 47 40 38",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "out there",
+     "morning",
+     "morning"
+    ],
+    "snare": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "morning",
+     "out there",
+     "morning",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "sicko mode",
+     "morning",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = sicko mode"
+   }
+  },
+  {
+   "id": "v04",
+   "label": "mor56 out36 sic8",
+   "trial": 5,
+   "weights": {
+    "morning": 0.56,
+    "out there": 0.36,
+    "sicko mode": 0.08
+   },
+   "key": "Ebm",
+   "bpm": 75.14,
+   "melody_vocabulary": "out there",
+   "bass_register_by_bar": "35 37 39 29",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "morning",
+     "morning",
+     "morning",
+     "sicko mode"
+    ],
+    "snare": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "morning",
+     "morning",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "morning",
+     "sicko mode",
+     "out there",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v05",
+   "label": "mor25 out45 sic30",
+   "trial": 5,
+   "weights": {
+    "morning": 0.25,
+    "out there": 0.45,
+    "sicko mode": 0.3
+   },
+   "key": "Ebm",
+   "bpm": 77.22,
+   "melody_vocabulary": "out there",
+   "bass_register_by_bar": "35 46 39 29",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "morning",
+     "out there",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "snare": [
+     "morning",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "morning",
+     "out there",
+     "out there",
+     "morning"
+    ],
+    "hat": [
+     "out there",
+     "out there",
+     "sicko mode",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v06",
+   "label": "mor45 out27 sic28",
+   "trial": 5,
+   "weights": {
+    "morning": 0.45,
+    "out there": 0.27,
+    "sicko mode": 0.28
+   },
+   "key": "Em",
+   "bpm": 75.59,
+   "melody_vocabulary": "out there",
+   "bass_register_by_bar": "40 38 40 30",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "morning",
+     "morning",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "out there",
+     "morning"
+    ],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v07",
+   "label": "mor9 out71 sic20",
+   "trial": 5,
+   "weights": {
+    "morning": 0.09,
+    "out there": 0.71,
+    "sicko mode": 0.2
+   },
+   "key": "Em",
+   "bpm": 78.78,
+   "melody_vocabulary": "sicko mode",
+   "bass_register_by_bar": "48 40 48 30",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "snare": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "morning",
+     "out there",
+     "out there",
+     "sicko mode"
+    ],
+    "melody": "grammar-v4, vocabulary = sicko mode"
+   }
+  },
+  {
+   "id": "v08",
+   "label": "mor14 out31 sic56",
+   "trial": 5,
+   "weights": {
+    "morning": 0.14,
+    "out there": 0.31,
+    "sicko mode": 0.56
+   },
+   "key": "Ebm",
+   "bpm": 78.33,
+   "melody_vocabulary": "out there",
+   "bass_register_by_bar": "47 39 47 34",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "out there"
+    ],
+    "snare": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "morning",
+     "morning"
+    ],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  }
+ ]
+}
