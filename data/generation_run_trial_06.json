@@ -1,0 +1,414 @@
+{
+ "generated": "2026-07-15",
+ "trial": 6,
+ "combos": [
+  {
+   "id": "v01",
+   "label": "t5v05weights-fixcheck",
+   "trial": 6,
+   "weights": {
+    "morning": 0.25,
+    "out there": 0.45,
+    "sicko mode": 0.3
+   },
+   "key": "Ebm",
+   "bpm": 77.22,
+   "melody_vocabulary": "morning",
+   "candidate_seed": 9700,
+   "candidate_scores": [
+    11.0,
+    11.0,
+    10.0,
+    11.0,
+    11.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "35 46 39 34",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "morning",
+     "out there",
+     "sicko mode",
+     "out there"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "morning",
+     "out there",
+     "morning",
+     "morning"
+    ],
+    "hat": [
+     "out there",
+     "morning",
+     "sicko mode",
+     "morning"
+    ],
+    "melody": "grammar-v4, vocabulary = morning"
+   }
+  },
+  {
+   "id": "v02",
+   "label": "t5v07weights-fixcheck",
+   "trial": 6,
+   "weights": {
+    "morning": 0.09,
+    "out there": 0.71,
+    "sicko mode": 0.2
+   },
+   "key": "Em",
+   "bpm": 78.78,
+   "melody_vocabulary": "morning",
+   "candidate_seed": 9731,
+   "candidate_scores": [
+    11.0,
+    11.0,
+    10.0,
+    10.98,
+    10.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "48 40 36 34",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "out there"
+    ],
+    "snare": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "out there",
+     "morning",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "out there",
+     "sicko mode",
+     "morning"
+    ],
+    "melody": "grammar-v4, vocabulary = morning"
+   }
+  },
+  {
+   "id": "v03",
+   "label": "mor24 out21 sic55",
+   "trial": 6,
+   "weights": {
+    "morning": 0.24,
+    "out there": 0.21,
+    "sicko mode": 0.55
+   },
+   "key": "Em",
+   "bpm": 76.72,
+   "melody_vocabulary": "sicko mode",
+   "candidate_seed": 9763,
+   "candidate_scores": [
+    10.0,
+    11.0,
+    10.0,
+    11.0,
+    11.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "48 38 40 29",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "morning",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "morning",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "morning",
+     "out there",
+     "sicko mode",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = sicko mode"
+   }
+  },
+  {
+   "id": "v04",
+   "label": "mor28 out26 sic45",
+   "trial": 6,
+   "weights": {
+    "morning": 0.29,
+    "out there": 0.26,
+    "sicko mode": 0.45
+   },
+   "key": "Ebm",
+   "bpm": 76.53,
+   "melody_vocabulary": "morning",
+   "candidate_seed": 9793,
+   "candidate_scores": [
+    11.0,
+    11.0,
+    10.0,
+    10.0,
+    11.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "47 39 39 28",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "sicko mode",
+     "morning",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "out there",
+     "morning",
+     "sicko mode"
+    ],
+    "clap": [
+     "morning",
+     "morning",
+     "out there",
+     "morning"
+    ],
+    "hat": [
+     "morning",
+     "morning",
+     "sicko mode",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = morning"
+   }
+  },
+  {
+   "id": "v05",
+   "label": "mor50 out11 sic40",
+   "trial": 6,
+   "weights": {
+    "morning": 0.5,
+    "out there": 0.11,
+    "sicko mode": 0.4
+   },
+   "key": "Ebm",
+   "bpm": 75.7,
+   "melody_vocabulary": "out there",
+   "candidate_seed": 9824,
+   "candidate_scores": [
+    11.0,
+    9.0,
+    11.0,
+    11.0,
+    11.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "39 51 39 37",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "morning"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "morning"
+    ],
+    "clap": [
+     "morning",
+     "morning",
+     "morning",
+     "morning"
+    ],
+    "hat": [
+     "sicko mode",
+     "sicko mode",
+     "morning",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v06",
+   "label": "mor21 out26 sic53",
+   "trial": 6,
+   "weights": {
+    "morning": 0.21,
+    "out there": 0.26,
+    "sicko mode": 0.53
+   },
+   "key": "Ebm",
+   "bpm": 77.01,
+   "melody_vocabulary": "out there",
+   "candidate_seed": 9855,
+   "candidate_scores": [
+    11.0,
+    11.0,
+    11.0,
+    9.98,
+    11.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "47 37 39 28",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "morning",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "sicko mode"
+    ],
+    "clap": [
+     "morning",
+     "morning",
+     "out there",
+     "morning"
+    ],
+    "hat": [
+     "out there",
+     "morning",
+     "morning",
+     "sicko mode"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v07",
+   "label": "mor24 out64 sic13",
+   "trial": 6,
+   "weights": {
+    "morning": 0.24,
+    "out there": 0.64,
+    "sicko mode": 0.13
+   },
+   "key": "Ebm",
+   "bpm": 78.5,
+   "melody_vocabulary": "out there",
+   "candidate_seed": 9887,
+   "candidate_scores": [
+    10.98,
+    11.0,
+    10.98,
+    11.0,
+    9.0,
+    11.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "47 39 35 28",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "out there",
+     "sicko mode",
+     "out there",
+     "sicko mode"
+    ],
+    "snare": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "clap": [
+     "out there",
+     "morning",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "out there",
+     "morning",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  },
+  {
+   "id": "v08",
+   "label": "mor7 out53 sic40",
+   "trial": 6,
+   "weights": {
+    "morning": 0.07,
+    "out there": 0.53,
+    "sicko mode": 0.4
+   },
+   "key": "Ebm",
+   "bpm": 78.48,
+   "melody_vocabulary": "out there",
+   "candidate_seed": 9919,
+   "candidate_scores": [
+    10.0,
+    10.0,
+    11.0,
+    11.0,
+    11.0,
+    10.0
+   ],
+   "chosen_score": 11.0,
+   "bass_register_by_bar": "39 34 47 28",
+   "bar_sources": {
+    "kick+bass (locked)": [
+     "sicko mode",
+     "out there",
+     "out there",
+     "sicko mode"
+    ],
+    "snare": [
+     "sicko mode",
+     "sicko mode",
+     "sicko mode",
+     "out there"
+    ],
+    "clap": [
+     "morning",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "hat": [
+     "out there",
+     "out there",
+     "out there",
+     "out there"
+    ],
+    "melody": "grammar-v4, vocabulary = out there"
+   }
+  }
+ ]
+}
