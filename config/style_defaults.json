@@ -26,5 +26,16 @@
   },
   "layering": {
     "snare_clap_offset_ticks": 5
+  },
+  "bass_register_shape": {
+    "loop_must_end_low": true,
+    "bounce": "shifting between high and low registers back/forth creates bounce",
+    "drop": "shifting high to low creates a drop feeling",
+    "_why": "Trell feedback 2026-07-13 (trial 02): liked register shifting for bounce, but the 4-bar loop must resolve to the low register; v04 (low bar 1, high bars 2-4) was the counter-example"
+  },
+  "melody_rules": {
+    "one_song_vocabulary": true,
+    "phrases_cross_barlines": "pickups into the next bar + sustained tails; bar-boxed phrases read as random notes",
+    "_why": "Trell feedback 2026-07-13 (trial 02): blended vocab = high-pitch random notes; only structure was bar containment"
   }
 }
