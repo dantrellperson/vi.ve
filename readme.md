@@ -187,6 +187,11 @@ Studies found and reviewed against project goals — decisions recorded:
 
 ### Successes:
 
+- 2026-07-13 — **Trial 05: 24/24 keep, 18/24 cream. Three full-cream packs (v01, v03, v04)
+  auto-registered in `styles`.** The "cursed" v04 weight recipe was exonerated — same
+  weights with a new seed produced a full-cream pack, so per-run dice variance is real
+  and recipes are not dead zones. New bottleneck: basslines (4/8 cream; wrong-lane and
+  bad-landing flags concentrate on high-register "out there" bass DNA and loop resolution).
 - 2026-07-13 — **Trial 02 (grammar melody + collage bass/drums): 11/24 kept (46%) vs 0/24.**
   Drums 5/8, basslines 4/8, melodies 2/8 — and kept melodies only "in the direction of
   usable." Key patterns: melody keeps happened ONLY on pure single-song combos (blended
