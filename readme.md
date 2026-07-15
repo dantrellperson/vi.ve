@@ -196,6 +196,12 @@ Studies found and reviewed against project goals — decisions recorded:
 
 ### Successes:
 
+- 2026-07-13 — 🏆 **RIDING TRAP ESTABLISHED (Trial 08).** vi.ve's first validated style
+  generator: 808 frame (root at C3), kick+bass anchor lock over a curated morning/sicko
+  pool, bar-1 ceiling, root/b7 endings, loop lands on root, one-vocabulary melodies,
+  best-of-6 candidate gate. Recipe + ruleset stored in the `styles` table
+  (status ESTABLISHED). Self-serve generation via `notebooks/run_generator.ipynb`
+  backed by `scripts/vive_engine.py` — the seed of the future `vive` Python package.
 - 2026-07-13 — **Trial 05: 24/24 keep, 18/24 cream. Three full-cream packs (v01, v03, v04)
   auto-registered in `styles`.** The "cursed" v04 weight recipe was exonerated — same
   weights with a new seed produced a full-cream pack, so per-run dice variance is real
@@ -240,6 +246,25 @@ Studies found and reviewed against project goals — decisions recorded:
    storage tour, root-cause analysis of the melody failure, style registry demo)
 10. ✅ Trial 02 generator built — `scripts/generate_vibes_v2.py` (motif AA'BA melody engine,
     one register, target-zone density/space); bass + drums keep the collage engine
+
+## Roadmap
+
+**Now (self-serve loop):** feed new hand-played MIDI packs into `midi_university` →
+analyze → experiment with trials via `notebooks/run_generator.ipynb` → grade manifests →
+cream formulas become named styles in Postgres. Each new pack expands the DNA pool and
+enables new styles.
+
+**Next:** grow `scripts/vive_engine.py` into a proper **`vive` Python package** that
+generates MIDI on request ("give me 4 riding-trap packs in Ebm at 78") — then evolve the
+package into an **AI assistant music producer bot**.
+
+**Later:** **waveform analysis** — mixing assistance from audio, and producing MIDI from
+audio samples (drum-stem work in `slice_drums_from_audio.py` is the seed).
+
+**Notebooks:**
+- `notebooks/run_generator.ipynb` — self-serve generation: configure → generate → grade → load
+- `notebooks/style_evolution_review.ipynb` — the 8-trial arc, post-mortem, and lessons
+- `notebooks/trial_01_review.ipynb` — historical: the original trial-01 analysis
 
 ## Recommendations
 
