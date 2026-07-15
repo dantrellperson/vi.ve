@@ -178,6 +178,15 @@ Studies found and reviewed against project goals — decisions recorded:
 
 ### Failures:
 
+- 2026-07-13 — **Trial 07: all 8 basslines failed.** Post-mortem found the math: every
+  failed bassline contained bars from "out there"'s verse bassline (the +8/octave/octave/+5
+  counter-melody structure). P(pattern in a 4-bar collage) = 1-(1-w)^4 ≈ 87% at w=0.4, the
+  score never penalized the source, the v7 octave-fold laundered the shape past its own
+  detector, and fix-check rerolls of flagged (out-heavy) recipes pushed out-there bass-bar
+  share 25% → 37.5% → 47% across trials 5–7. Fix (trial 08): out there removed from the
+  kick+bass anchor pool; retired structure is now a score penalty; no more flagged-recipe
+  rerolls.
+
 - 2026-07-13 — **Trial 01 (bar-collage generation): 0/24 keep rate.** Melodies sound like
   channel surfing. Root cause isolated in `notebooks/trial_01_review.ipynb`: the melody
   pool mixes three incompatible sources (dense chord progression / plucky arp / sparse
