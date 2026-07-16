@@ -108,7 +108,8 @@ def run_trial(trial, combos=None, n_combos=8, n_candidates=N_CANDIDATES, seed_ba
                       for k in range(n_candidates)]
         best = max(candidates, key=lambda c: c["score"])
 
-        folder = OUT_DIR / f"t{trial} {combo['id']} {combo['label']}"
+        # short folder name (matches the midi_university convention); DNA goes in dna.txt
+        folder = OUT_DIR / f"t{trial} {combo['id']} key {best['key']} bpm {bpm:g}"
         folder.mkdir(exist_ok=True)
         rng, mel_rng = best["rng"], best["mel_rng"]
 
@@ -129,6 +130,19 @@ def run_trial(trial, combos=None, n_combos=8, n_candidates=N_CANDIDATES, seed_ba
         prov_log["melody"] = f"vocabulary = {best['melody_vocab']}"
 
         bar1 = sorted(bar_slice(best["bass"], 0))
+        (folder / "dna.txt").write_text(
+            f"t{trial} {combo['id']} — vi.ve generator\n"
+            f"key: {best['key']}   bpm: {bpm}\n"
+            f"label: {combo['label']}\n"
+            f"weights: " + "  ".join(f"{s}:{w}" for s, w in combo["weights"].items()) + "\n"
+            f"melody vocabulary: {best['melody_vocab']}\n"
+            f"kick+bass bar sources: {' | '.join(best['prov'])}\n"
+            + "".join(f"{role} bar sources: {' | '.join(p)}\n"
+                      for role, (n_, p) in best["drums_extra"].items())
+            + f"bass bar 1: {' '.join(note_name(p) for _, p, _ in bar1)}\n"
+            f"loop lands on: {note_name(sorted(best['bass'])[-1][1]) if best['bass'] else '-'}\n"
+            f"gate score: {best['score']} (all candidates: "
+            f"{[c['score'] for c in candidates]})\n")
         manifest.append({"id": combo["id"], "label": combo["label"], "trial": trial,
                          "weights": combo["weights"], "key": best["key"], "bpm": bpm,
                          "melody_vocabulary": best["melody_vocab"],
