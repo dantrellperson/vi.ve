@@ -58,7 +58,8 @@ DRUM_WORDS = {"kick", "snare", "clap", "hat", "hihat", "perc", "rim"}
 # ------------------------------------------------------------------ ground truth
 
 def clean(name):
-    s = re.sub(r"\(\d+\)|\d+", " ", name.lower())
+    # strip track numbers/take digits but KEEP "808" — it identifies the bass part
+    s = re.sub(r"\(\d+\)|\b(?!808\b)\d+\b", " ", name.lower())
     return " ".join(s.replace("-", " ").split())
 
 
@@ -260,8 +261,12 @@ def run(skip_demucs=False):
     # ---- Test B: full mix -> demucs -> transcribe
     if not skip_demucs:
         print("\nTEST B — full pipeline (mix -> Demucs -> transcribe)…")
-        with tempfile.TemporaryDirectory() as td:
-            stems = separate_stems(song["mix"], Path(td))
+        cache = GT_DIR / "_stems_cache"
+        stem_dir = cache / CONFIG["demucs_model"] / song["mix"].stem
+        if not stem_dir.exists() or not list(stem_dir.glob("*.wav")):
+            separate_stems(song["mix"], cache)
+        stems = {p.stem: p for p in stem_dir.glob("*.wav")}
+        if True:
             drum_parts = [p for p in gts if set(p.split()) & DRUM_WORDS]
             mel_parts = [p for p in gts if p not in drum_parts]
             bass_part = next((p for p in mel_parts if "808" in p or "bass" in p), None)
