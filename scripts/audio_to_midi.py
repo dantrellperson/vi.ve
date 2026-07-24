@@ -94,13 +94,15 @@ def separate_stems(audio_path, workdir):
 
 def transcribe_stem(wav_path):
     """Basic Pitch: spectrogram -> note events (start_s, end_s, midi_pitch, velocity)."""
+    import contextlib, io
     from basic_pitch.inference import predict
-    _, _, note_events = predict(
-        str(wav_path),
-        onset_threshold=CONFIG["onset_threshold"],
-        frame_threshold=CONFIG["frame_threshold"],
-        minimum_note_length=CONFIG["min_note_len_ms"],
-    )
+    with contextlib.redirect_stdout(io.StringIO()):   # silence CoreML debug spam
+        _, _, note_events = predict(
+            str(wav_path),
+            onset_threshold=CONFIG["onset_threshold"],
+            frame_threshold=CONFIG["frame_threshold"],
+            minimum_note_length=CONFIG["min_note_len_ms"],
+        )
     notes = []
     for ev in note_events:
         start, end, pitch, amplitude = ev[0], ev[1], int(ev[2]), float(ev[3])

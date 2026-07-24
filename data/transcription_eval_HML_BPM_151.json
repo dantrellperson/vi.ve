@@ -1,0 +1,86 @@
+{
+ "song": "HML BPM 151",
+ "bpm": 151.0,
+ "clean_stem": {
+  "hi hat": {
+   "precision": 1.0,
+   "recall": 0.83,
+   "f1": 0.91,
+   "offset_bars": 0.0,
+   "n_gt": 792,
+   "n_pred": 661
+  },
+  "pluto clap": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "offset_bars": 0.0,
+   "n_gt": 64,
+   "n_pred": 64
+  },
+  "open hat": {
+   "precision": 0.92,
+   "recall": 0.99,
+   "f1": 0.95,
+   "offset_bars": 0.0,
+   "n_gt": 90,
+   "n_pred": 97
+  },
+  "keys magic": {
+   "precision": 0.21,
+   "recall": 0.83,
+   "f1": 0.34,
+   "onset_f1": 0.4,
+   "f1_pitch_class": 0.34,
+   "f1_transposed": 0.34,
+   "detected_shift_semis": 0,
+   "split_rate": 3.07,
+   "offset_s": 6.41,
+   "n_gt": 180,
+   "n_pred": 703
+  },
+  "cb": {
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "onset_f1": 0.32,
+   "f1_pitch_class": 0.19,
+   "f1_transposed": 0.19,
+   "detected_shift_semis": -36,
+   "split_rate": 0.39,
+   "offset_s": 1.51,
+   "n_gt": 112,
+   "n_pred": 114
+  },
+  "signature kick": {
+   "precision": 0.66,
+   "recall": 1.0,
+   "f1": 0.8,
+   "offset_bars": 0.0,
+   "n_gt": 122,
+   "n_pred": 184
+  },
+  "rim snare": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "offset_bars": 0.0,
+   "n_gt": 126,
+   "n_pred": 126
+  },
+  "synthy horn": {
+   "precision": 0.57,
+   "recall": 1.0,
+   "f1": 0.72,
+   "onset_f1": 0.74,
+   "f1_pitch_class": 0.72,
+   "f1_transposed": 0.72,
+   "detected_shift_semis": 0,
+   "split_rate": 0.92,
+   "offset_s": 0.08,
+   "n_gt": 84,
+   "n_pred": 148
+  }
+ },
+ "full_pipeline": {}
+}
