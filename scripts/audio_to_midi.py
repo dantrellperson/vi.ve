@@ -23,11 +23,17 @@ Tuning knobs live in CONFIG — adjust after quality testing.
 """
 
 import csv
+import logging
 import subprocess
 import sys
 import tempfile
+import warnings
 from datetime import date
 from pathlib import Path
+
+# keep notebook output to the necessary success messages only
+warnings.filterwarnings("ignore")
+logging.getLogger().setLevel(logging.ERROR)
 
 import librosa
 import mido
@@ -98,8 +104,8 @@ def separate_stems(audio_path, workdir):
 def transcribe_stem(wav_path):
     """Basic Pitch: spectrogram -> note events (start_s, end_s, midi_pitch, velocity)."""
     import contextlib, io
-    from basic_pitch.inference import predict
-    with contextlib.redirect_stdout(io.StringIO()):   # silence CoreML debug spam
+    with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+        from basic_pitch.inference import predict    # import inside: its warnings stay quiet too
         _, _, note_events = predict(
             str(wav_path),
             onset_threshold=CONFIG["onset_threshold"],
