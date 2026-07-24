@@ -41,12 +41,15 @@ LOG_CSV = DATA_DIR / "songs_loaded.csv"
 AUDIO_EXTS = {".mp3", ".m4a", ".wav", ".flac", ".aiff", ".aif", ".ogg"}
 TPQ = 480
 
+# Defaults tuned 2026-07-24 by harness grid-search vs HML ground truth
+# (data/tuning_round_01.json): keys 0.34->0.46, horn 0.72->0.86, drum recall 0.52->0.57.
+# Separator bake-off kept htdemucs: 6s scored worse, ft scored equal at 4x the runtime.
 CONFIG = {
-    "onset_threshold": 0.5,    # Basic Pitch: higher = fewer, more confident note starts
-    "frame_threshold": 0.3,    # Basic Pitch: pitch confidence per frame
-    "min_note_len_ms": 60,     # drop blips shorter than this
+    "onset_threshold": 0.8,    # Basic Pitch: higher = fewer, more confident note starts
+    "frame_threshold": 0.45,   # Basic Pitch: pitch confidence per frame
+    "min_note_len_ms": 60,     # drop blips shorter than this (keys-only would prefer 200)
     "min_amplitude_vel": 30,   # velocity floor for quietest kept note
-    "drum_onset_delta": 0.06,  # drum hit sensitivity (lower = more hits)
+    "drum_onset_delta": 0.02,  # drum hit sensitivity (lower = more hits)
     "demucs_model": "htdemucs",
 }
 
