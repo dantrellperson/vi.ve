@@ -106,3 +106,82 @@ reconstruct the project's reasoning from this file + HANDOFF.md + readme.md.
     everything), htdemucs_ft identical at 4× runtime.
 - **Open request when session ended**: quiet the notebook's run cell (too much output),
   which was interrupted by this handoff request.
+
+## 2026-07-24 (later) — Trell's grades, the blind metric, and the BPM discovery
+
+- **Trell graded the tuned re-run** (recorded in `data/songs_loaded.csv`, pre-tuning
+  round backfilled so the delta is visible): melody New Topic **2.8 -> 4.4**, Big 5 3.7,
+  Aye Tay 3.2; bassline **~2.8 -> 3.8 on all three** (a flat score across three different
+  songs = a systematic ceiling, not a song problem — nothing folds extracted bass into
+  the C3/808 frame yet); **drums 0/5 on all three, unchanged**.
+- **Diagnosed the drum failure by measurement**, not guesswork:
+  - **0 co-hits** across all three songs and all three pairs. The classifier was
+    `if low / elif high / else`, so one onset could only ever become ONE drum. Kick+hat
+    and snare+hat land together constantly in trap; those hits were deleted, not
+    misclassified.
+  - **Class collapse**: 0.09 kicks/bar vs 16.6 hats/bar on Aye Tay (4 kicks in 43 bars).
+    The kick test `low(<150Hz) > 0.35` rarely fired because Demucs routes 808/sub energy
+    to the BASS stem — the kick's low end is in a different file.
+  - **Double-triggers**: 74% of Aye Tay's hat intervals were shorter than a 32nd.
+- **THE MEASUREMENT BLIND SPOT**: the harness reported drum recall 0.52 -> 0.57
+  ("improving") while Trell graded the same packs 0/5. Both were right — the union-onset
+  metric only asked *did some drum fire here*, never *was it the right drum*. Tuning
+  round 1 optimised against a metric that could not see the actual failure. Same lesson
+  as the trial-7 post-mortem, new location.
+- **`eval_drums_per_class()`** in `transcription_eval.py` — per-lane precision/recall/F1
+  + confusion matrix, one shared alignment offset so no lane can slide to flatter itself.
+  Test A now also runs it per solo bounce, where the true lane is known, isolating
+  classification from detection. The legacy union metric is kept for continuity.
+  It immediately caught a bug in the new classifier that the union metric was blind to:
+  a **solo kick bounce scoring 3003 hi-hats** (normalising a near-silent band turns its
+  noise floor into hits) -> fixed with an absolute band-energy floor.
+- **`transcribe_drums()` rewritten**: per-band onset-strength envelopes with an
+  INDEPENDENT peak-picker per role (simultaneity is now representable), share-based
+  gating (every drum is broadband at its transient, so absolute energy fires every lane;
+  what separates roles is which band is *disproportionately* excited), and per-role
+  minimum spacing. Split into `drum_envelopes()` (expensive) + `pick_drum_hits()` (cheap)
+  so tuning sweeps thresholds without recomputing audio.
+- **`scripts/tune_drums.py`** — grid-search scored by per-class macro F1
+  (`data/drum_tuning_round_02.json`). **Macro F1 0.65 -> 0.77**; kick **0.54 -> 0.88**
+  (predictions 330 -> 129 against 122 real kicks; "predicted kick, actually snare" -> 0);
+  hihat 0.84; **snare still the weak lane at 0.58** (predicted snares land kick 96 /
+  snare 92 / hihat 83 — near a coin flip). Thresholds chosen from the middle of a broad
+  plateau, not its edge. Extracted packs went from 0 co-hits to 14-40% kick+hat and
+  79-94% snare+hat; Aye Tay's kick lane went 4 hits -> 199.
+- **Hypothesis TESTED AND REJECTED** (recorded so nobody retries it): giving the snare
+  the 1500-6000 Hz band, where a clap's crack lives, dropped snare F1 0.58 -> 0.47.
+  That band carries more hi-hat bleed than clap. Snare stays body-only.
+- **THE BIGGER FINDING — BPM precision, not transcription, was the deliverable problem.**
+  Extracted packs looked 15-21% on-grid, which reads like garbage timing. It was not:
+  `librosa.beat_track` is only accurate to ~1%, and over a 40-70 bar pack that error
+  accumulates until the MIDI has slid a full 16th off the grid. The pack starts in time
+  and progressively drifts out. Correcting the tempo by a fraction of a percent:
+
+  | song | logged | true | error | on-grid naive -> true |
+  |---|---|---|---|---|
+  | Aye Tay | 76.00 | **77.00** | +1.32% | 18% -> **78%** |
+  | BIG 5 | 64.60 | 64.51 | -0.14% | 15% -> **86%** |
+  | costly. | 80.75 | 80.99 | +0.30% | 21% -> **68%** |
+  | New Topic | 80.75 | 81.01 | +0.32% | 19% -> **68%** |
+  | Drake | 95.70 | 95.51 | -0.20% | 16% -> **61%** |
+
+  The hits were always in the right places. Aye Tay's fit holds across both halves
+  separately, so it is a detection error, not a tempo change — and it is also the song
+  Trell graded lowest on melody (3.2), which the drift explains.
+- **`refine_bpm()`** — fits onsets to a 16th grid to sharpen the coarse estimate.
+  Cross-validated: run on the raw audio it independently recovers all five tempos that
+  the grid-fit on the *extracted MIDI* had found. This sits upstream of drums, melody
+  and bass, so it improves every part of every pack at once.
+- **All five songs re-extracted with refined tempo.** Verification: the grid-fit now
+  wants a tempo correction of **x1.000 on every song** — the estimate has nothing left
+  to give. Whole-pack alignment 61–84% on-grid.
+- **New finding from that verification — the kick lane is timing-jittery.** Snare 81–91%
+  and hi-hat 81–94% on-grid, but kick only 26–36%. A constant shift recovers 1–2 points,
+  so it is JITTER, not lag: onsets detected inside a 20–150 Hz band are inherently
+  smeared, because the waveform period there is 7–50 ms. The kick therefore passes the
+  harness's ±50 ms note tolerance (F1 0.88) while failing a ±15 ms grid test — the two
+  metrics disagree and both are right. **Named fix: detect the transient broadband
+  (sharp) and use the low band only to attribute it, i.e. snap kick times to the nearest
+  full-spectrum onset.** Not yet implemented.
+- Two new songs appeared in `songs_to_load` (COSTLY., Drake "What Would Pluto Do") and
+  were picked up by the forced re-run; both are ungraded.

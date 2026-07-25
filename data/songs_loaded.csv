@@ -1,4 +1,17 @@
 date,title,key,bpm,source_file,bassline_notes,melody_notes,vocal_melody_notes,kick_hits,snare_hits,hihat_hits,quality (fill in),notes (fill in)
-2026-07-24,aye tay (128kbit_aac),C,76.0,Aye Tay (128kbit_AAC).m4a,122,1189,442,4,6,593,,
-2026-07-24,big 5 (128kbit_aac),Em,64.6,BIG 5 (128kbit_AAC).m4a,189,1062,362,45,10,451,,
-2026-07-24,trap dickey - new topic (prod by zg the goat) lyric video (128kbit_aac),Gm,80.75,Trap Dickey - New Topic (prod by ZG The Goat) lyric video (128kbit_AAC).m4a,449,1758,849,32,59,535,,
+2026-07-24,aye tay (128kbit_aac),C,76.0,Aye Tay (128kbit_AAC).m4a,122,1189,442,4,6,593,mel ? / bass ~2.8 / drums 0.0,pre-tuning; CHANGELOG: sampled lead split into note spam
+2026-07-24,big 5 (128kbit_aac),Em,64.6,BIG 5 (128kbit_AAC).m4a,189,1062,362,45,10,451,mel ? / bass ~2.8 / drums 0.0,pre-tuning; CHANGELOG: drums total failure
+2026-07-24,trap dickey - new topic (prod by zg the goat) lyric video (128kbit_aac),Gm,80.75,Trap Dickey - New Topic (prod by ZG The Goat) lyric video (128kbit_AAC).m4a,449,1758,849,32,59,535,mel 2.8 / bass ~2.8 / drums 0.0,pre-tuning; piano melody was the best of the three
+2026-07-24,aye tay (128kbit_aac),C,76.0,Aye Tay (128kbit_AAC).m4a,112,483,168,4,7,709,mel 3.2 / bass 3.8 / drums 0.0,tuned. weakest melody of 3; 74% of hat IOIs are sub-16th = double-triggers. 4 kicks in 43 bars.
+2026-07-24,big 5 (128kbit_aac),Em,64.6,BIG 5 (128kbit_AAC).m4a,77,395,136,73,15,484,mel 3.7 / bass 3.8 / drums 0.0,"tuned. drums: 0 co-hits, 14.6 hats/bar vs 2.2 kicks/bar = class collapse"
+2026-07-24,trap dickey - new topic (prod by zg the goat) lyric video (128kbit_aac),Gm,80.75,Trap Dickey - New Topic (prod by ZG The Goat) lyric video (128kbit_AAC).m4a,200,979,437,32,69,619,mel 4.4 / bass 3.8 / drums 0.0,"tuned. best melody (+1.6 vs pre-tuning). drums still 0: 0 co-hits, 10.5 hats/bar"
+2026-07-24,aye tay (128kbit_aac),C,76.0,Aye Tay (128kbit_AAC).m4a,113,473,163,199,327,597,SUPERSEDED (pack deleted),"round-2 drum fix only, stale BPM; replaced by the refined-tempo run below"
+2026-07-24,big 5 (128kbit_aac),Em,64.6,BIG 5 (128kbit_AAC).m4a,75,389,133,109,303,486,SUPERSEDED (pack deleted),"round-2 drum fix only, stale BPM; replaced by the refined-tempo run below"
+2026-07-24,costly. (152kbit_opus),Eb,80.75,COSTLY. (152kbit_Opus).mp3,140,574,305,293,223,440,SUPERSEDED (pack deleted),"round-2 drum fix only, stale BPM; replaced by the refined-tempo run below"
+2026-07-24,drake - what would pluto do (audio) (152kbit_opus),Ebm,95.7,Drake - What Would Pluto Do (Audio) (152kbit_Opus).mp3,121,843,306,499,233,459,SUPERSEDED (pack deleted),"round-2 drum fix only, stale BPM; replaced by the refined-tempo run below"
+2026-07-24,trap dickey - new topic (prod by zg the goat) lyric video (128kbit_aac),Gm,80.75,Trap Dickey - New Topic (prod by ZG The Goat) lyric video (128kbit_AAC).m4a,202,984,444,376,266,634,SUPERSEDED (pack deleted),"round-2 drum fix only, stale BPM; replaced by the refined-tempo run below"
+2026-07-24,aye tay (128kbit_aac),C,77.0,Aye Tay (128kbit_AAC).m4a,113,470,162,179,340,602,awaiting ear test,round 2: per-band drum detection + refine_bpm. first extraction with correct tempo
+2026-07-24,big 5 (128kbit_aac),Em,64.51,BIG 5 (128kbit_AAC).m4a,77,388,140,128,317,489,awaiting ear test,round 2: per-band drum detection + refine_bpm. first extraction with correct tempo
+2026-07-24,costly. (152kbit_opus),Eb,80.99,COSTLY. (152kbit_Opus).mp3,141,584,297,305,228,443,awaiting ear test,round 2: per-band drum detection + refine_bpm. first extraction with correct tempo
+2026-07-24,drake - what would pluto do (audio) (152kbit_opus),Ebm,95.49,Drake - What Would Pluto Do (Audio) (152kbit_Opus).mp3,125,855,316,500,237,465,awaiting ear test,round 2: per-band drum detection + refine_bpm. first extraction with correct tempo
+2026-07-24,trap dickey - new topic (prod by zg the goat) lyric video (128kbit_aac),Gm,81.01,Trap Dickey - New Topic (prod by ZG The Goat) lyric video (128kbit_AAC).m4a,202,985,441,355,263,631,awaiting ear test,round 2: per-band drum detection + refine_bpm. first extraction with correct tempo

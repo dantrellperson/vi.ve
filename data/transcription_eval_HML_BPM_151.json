@@ -4,11 +4,17 @@
  "clean_stem": {
   "hi hat": {
    "precision": 1.0,
-   "recall": 0.83,
-   "f1": 0.91,
+   "recall": 0.89,
+   "f1": 0.94,
    "offset_bars": 0.0,
    "n_gt": 792,
-   "n_pred": 661
+   "n_pred": 703,
+   "true_lane": "hihat",
+   "lane_f1": 0.84,
+   "leak_to": {
+    "kick": 32,
+    "snare": 600
+   }
   },
   "pluto clap": {
    "precision": 1.0,
@@ -16,49 +22,67 @@
    "f1": 1.0,
    "offset_bars": 0.0,
    "n_gt": 64,
-   "n_pred": 64
+   "n_pred": 64,
+   "true_lane": "snare",
+   "lane_f1": 1.0,
+   "leak_to": {
+    "kick": 10,
+    "hihat": 64
+   }
   },
   "open hat": {
-   "precision": 0.92,
+   "precision": 0.55,
    "recall": 0.99,
-   "f1": 0.95,
+   "f1": 0.7,
    "offset_bars": 0.0,
    "n_gt": 90,
-   "n_pred": 97
+   "n_pred": 163,
+   "true_lane": "hihat",
+   "lane_f1": 0.82,
+   "leak_to": {
+    "kick": 134,
+    "snare": 141
+   }
   },
   "keys magic": {
-   "precision": 0.21,
+   "precision": 0.32,
    "recall": 0.83,
-   "f1": 0.34,
-   "onset_f1": 0.4,
-   "f1_pitch_class": 0.34,
-   "f1_transposed": 0.34,
+   "f1": 0.46,
+   "onset_f1": 0.47,
+   "f1_pitch_class": 0.46,
+   "f1_transposed": 0.46,
    "detected_shift_semis": 0,
-   "split_rate": 3.07,
-   "offset_s": 6.41,
+   "split_rate": 1.79,
+   "offset_s": 6.4,
    "n_gt": 180,
-   "n_pred": 703
+   "n_pred": 465
   },
   "cb 808": {
    "precision": 0.0,
    "recall": 0.0,
    "f1": 0.0,
-   "onset_f1": 0.32,
-   "f1_pitch_class": 0.19,
-   "f1_transposed": 0.19,
+   "onset_f1": 0.3,
+   "f1_pitch_class": 0.21,
+   "f1_transposed": 0.21,
    "detected_shift_semis": -36,
-   "split_rate": 0.39,
-   "offset_s": 1.51,
+   "split_rate": 0.32,
+   "offset_s": 1.5,
    "n_gt": 112,
-   "n_pred": 114
+   "n_pred": 118
   },
   "signature kick": {
-   "precision": 0.66,
+   "precision": 0.56,
    "recall": 1.0,
-   "f1": 0.8,
+   "f1": 0.72,
    "offset_bars": 0.0,
    "n_gt": 122,
-   "n_pred": 184
+   "n_pred": 218,
+   "true_lane": "kick",
+   "lane_f1": 0.43,
+   "leak_to": {
+    "snare": 228,
+    "hihat": 0
+   }
   },
   "rim snare": {
    "precision": 1.0,
@@ -66,20 +90,26 @@
    "f1": 1.0,
    "offset_bars": 0.0,
    "n_gt": 126,
-   "n_pred": 126
+   "n_pred": 126,
+   "true_lane": "snare",
+   "lane_f1": 0.29,
+   "leak_to": {
+    "kick": 4,
+    "hihat": 126
+   }
   },
   "synthy horn": {
-   "precision": 0.57,
-   "recall": 1.0,
-   "f1": 0.72,
-   "onset_f1": 0.74,
-   "f1_pitch_class": 0.72,
-   "f1_transposed": 0.72,
+   "precision": 0.93,
+   "recall": 0.85,
+   "f1": 0.89,
+   "onset_f1": 0.89,
+   "f1_pitch_class": 0.89,
+   "f1_transposed": 0.89,
    "detected_shift_semis": 0,
-   "split_rate": 0.92,
+   "split_rate": 0.02,
    "offset_s": 0.08,
    "n_gt": 84,
-   "n_pred": 148
+   "n_pred": 76
   }
  },
  "full_pipeline": {
@@ -88,47 +118,94 @@
    "recall": 0.0,
    "f1": 0.0,
    "onset_f1": 0.27,
-   "f1_pitch_class": 0.01,
-   "f1_transposed": 0.09,
-   "detected_shift_semis": -53,
-   "split_rate": 0.66,
-   "offset_s": 4.69,
+   "f1_pitch_class": 0.17,
+   "f1_transposed": 0.17,
+   "detected_shift_semis": -36,
+   "split_rate": 0.45,
+   "offset_s": 1.55,
    "n_gt": 112,
-   "n_pred": 176
+   "n_pred": 144
   },
   "keys magic": {
-   "precision": 0.21,
+   "precision": 0.41,
    "recall": 1.0,
-   "f1": 0.35,
-   "onset_f1": 0.4,
-   "f1_pitch_class": 0.35,
-   "f1_transposed": 0.35,
+   "f1": 0.58,
+   "onset_f1": 0.59,
+   "f1_pitch_class": 0.58,
+   "f1_transposed": 0.58,
    "detected_shift_semis": 0,
-   "split_rate": 3.74,
+   "split_rate": 1.46,
    "offset_s": 0.02,
    "n_gt": 180,
-   "n_pred": 854
+   "n_pred": 443
   },
   "synthy horn": {
-   "precision": 0.01,
-   "recall": 0.08,
-   "f1": 0.02,
-   "onset_f1": 0.18,
-   "f1_pitch_class": 0.02,
-   "f1_transposed": 0.03,
-   "detected_shift_semis": 10,
-   "split_rate": 7.43,
-   "offset_s": 23.09,
+   "precision": 0.02,
+   "recall": 0.1,
+   "f1": 0.04,
+   "onset_f1": 0.26,
+   "f1_pitch_class": 0.14,
+   "f1_transposed": 0.1,
+   "detected_shift_semis": 12,
+   "split_rate": 3.42,
+   "offset_s": 22.9,
    "n_gt": 84,
-   "n_pred": 694
+   "n_pred": 352
   },
   "all drums (union)": {
-   "precision": 0.99,
-   "recall": 0.52,
-   "f1": 0.68,
+   "precision": 0.97,
+   "recall": 0.57,
+   "f1": 0.72,
    "offset_bars": 0.0,
    "n_gt": 1194,
-   "n_pred": 632
+   "n_pred": 701
+  },
+  "drums (per class)": {
+   "macro_f1": 0.77,
+   "per_class": {
+    "kick": {
+     "precision": 0.86,
+     "recall": 0.91,
+     "f1": 0.88,
+     "n_gt": 122,
+     "n_pred": 129
+    },
+    "snare": {
+     "precision": 0.49,
+     "recall": 0.7,
+     "f1": 0.58,
+     "n_gt": 190,
+     "n_pred": 271
+    },
+    "hihat": {
+     "precision": 0.99,
+     "recall": 0.73,
+     "f1": 0.84,
+     "n_gt": 882,
+     "n_pred": 652
+    }
+   },
+   "confusion": {
+    "kick": {
+     "kick": 91,
+     "snare": 0,
+     "hihat": 37,
+     "(none)": 1
+    },
+    "snare": {
+     "kick": 96,
+     "snare": 92,
+     "hihat": 83,
+     "(none)": 0
+    },
+    "hihat": {
+     "kick": 78,
+     "snare": 90,
+     "hihat": 484,
+     "(none)": 0
+    }
+   },
+   "offset_bars": 0.0
   }
  }
 }

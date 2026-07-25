@@ -1,0 +1,1678 @@
+{
+ "grid": {
+  "drum_share_kick": [
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5
+  ],
+  "drum_share_snare": [
+   0.15,
+   0.25,
+   0.35,
+   0.45,
+   0.55
+  ],
+  "drum_share_hihat": [
+   0.02,
+   0.05,
+   0.1,
+   0.15,
+   0.2,
+   0.25
+  ]
+ },
+ "results": [
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.73,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.72,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.72,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.72,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.72,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.71,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.7,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.69,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.42,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.68,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.42,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.47,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.67,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.66,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.42,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.42,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.47,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.65,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.35,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.4,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.88,
+    "snare": 0.38,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.64,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.42,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.63,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.42,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.47,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.83,
+    "snare": 0.38,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.02,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.05,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.84
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.1,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.83
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.62,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.42,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.15,
+   "macro_f1": 0.61,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.8
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.6,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.42,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.45,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.59,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.47,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.3,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.72,
+    "snare": 0.38,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.58,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.73
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.15,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.56,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.25,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.56,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.37,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.35,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.56,
+   "per_class": {
+    "kick": 0.64,
+    "snare": 0.38,
+    "hihat": 0.65
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.2,
+   "macro_f1": 0.26,
+   "per_class": {
+    "kick": 0.14,
+    "snare": 0.0,
+    "hihat": 0.64
+   }
+  },
+  {
+   "drum_share_kick": 0.45,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.23,
+   "per_class": {
+    "kick": 0.13,
+    "snare": 0.01,
+    "hihat": 0.54
+   }
+  },
+  {
+   "drum_share_kick": 0.5,
+   "drum_share_snare": 0.55,
+   "drum_share_hihat": 0.25,
+   "macro_f1": 0.21,
+   "per_class": {
+    "kick": 0.08,
+    "snare": 0.01,
+    "hihat": 0.54
+   }
+  }
+ ]
+}

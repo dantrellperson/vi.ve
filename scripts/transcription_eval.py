@@ -46,7 +46,7 @@ import numpy as np
 import mir_eval
 
 sys.path.append(str(Path(__file__).resolve().parent))
-from audio_to_midi import CONFIG, separate_stems, transcribe_stem
+from audio_to_midi import CONFIG, separate_stems, transcribe_stem, transcribe_drums
 
 GT_DIR = Path("/Users/trell/trell_music_life/songs_to_load/ground_truth")
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -198,6 +198,76 @@ def eval_melodic(gt, pred, bpm):
             "n_gt": len(gt_on), "n_pred": int(sel.sum())}
 
 
+DRUM_CLASSES = ("kick", "snare", "hihat")
+
+
+def drum_class_of(part):
+    """Map a ground-truth part name to the three lanes the pipeline can emit.
+    Clap and rim layer with the snare in Trell's kits, so they score as snare."""
+    p = part.lower()
+    if "kick" in p:
+        return "kick"
+    if "hat" in p:
+        return "hihat"
+    if "snare" in p or "clap" in p or "rim" in p:
+        return "snare"
+    return None
+
+
+def eval_drums_per_class(gt_by_class, pred_by_class, bpm, span):
+    """Per-lane precision/recall/F1 plus a confusion matrix.
+
+    This is the metric the harness was missing. The union-onset score it replaces
+    asked only "did SOME drum fire near here" — it read 0.52 -> 0.57 across tuning
+    round 1 while Trell graded the same three packs 0/5, because it could not see
+    that the hits were landing in the wrong lane. Rows of `confusion` are the lane
+    we predicted, columns the lane the ground truth says it was; "(none)" means the
+    prediction matched no ground-truth hit at all (a false positive).
+    """
+    gt_all = [v for v in gt_by_class.values() if len(v)]
+    # Align using only the lanes that HAVE ground truth. On a solo bounce (one lane)
+    # the other lanes are pure leakage, and letting thousands of leaked hits vote on
+    # the offset drags the alignment off the part we are actually scoring.
+    pred_all = [np.asarray(pred_by_class[c]) for c in gt_by_class
+                if len(pred_by_class.get(c, []))]
+    if not gt_all or not pred_all:
+        return {"macro_f1": 0.0, "per_class": {}, "confusion": {}}
+    gt_all = np.sort(np.concatenate(gt_all))
+    pred_all = np.sort(np.concatenate(pred_all))
+    # ONE offset for every lane: they come from the same audio, so letting each lane
+    # slide to its own best alignment would flatter the score.
+    off = best_offset(gt_all, pred_all, bpm, span)
+
+    per_class, confusion, f1s = {}, {}, []
+    for cls in DRUM_CLASSES:
+        g = np.asarray(gt_by_class.get(cls, []))
+        p = np.asarray(pred_by_class.get(cls, []))
+        p = np.sort(p[(p >= off - ONSET_TOL) & (p <= off + span + ONSET_TOL)] - off)
+        if len(g) and len(p):
+            f1, pr, rc = mir_eval.onset.f_measure(g, p, window=ONSET_TOL)
+        else:
+            f1 = pr = rc = 0.0
+        per_class[cls] = {"precision": round(pr, 2), "recall": round(rc, 2),
+                          "f1": round(f1, 2), "n_gt": int(len(g)), "n_pred": int(len(p))}
+        f1s.append(f1)
+
+        row = {c: 0 for c in DRUM_CLASSES}
+        row["(none)"] = 0
+        for t in p:
+            landed, nearest = "(none)", ONSET_TOL
+            for other in DRUM_CLASSES:
+                g2 = np.asarray(gt_by_class.get(other, []))
+                if len(g2):
+                    d = float(np.min(np.abs(g2 - t)))
+                    if d < nearest:
+                        landed, nearest = other, d
+            row[landed] += 1
+        confusion[cls] = row
+
+    return {"macro_f1": round(float(np.mean(f1s)), 2), "per_class": per_class,
+            "confusion": confusion, "offset_bars": round(off / (240 / bpm), 1)}
+
+
 def eval_drums(gt, pred_on, bpm):
     gt_on, _, span = gt
     if len(pred_on) == 0 or len(gt_on) == 0:
@@ -255,6 +325,18 @@ def run(skip_demucs=False):
         drum = bool(set(part.split()) & DRUM_WORDS)
         r = (eval_drums(gt, predict_onsets(files["bounce"]), bpm) if drum
              else eval_melodic(gt, predict_melodic(files["bounce"]), bpm))
+        if drum:
+            # a solo bounce has a KNOWN true lane, so this isolates classification
+            # from detection: anything the classifier puts in another lane is leakage.
+            cls = drum_class_of(part)
+            if cls:
+                pred_by_class = {c: np.array([t for t, _ in h]) for c, h in
+                                 transcribe_drums(files["bounce"]).items()}
+                lanes = eval_drums_per_class({cls: gt[0]}, pred_by_class, bpm, gt[2])
+                r["true_lane"] = cls
+                r["lane_f1"] = lanes["per_class"].get(cls, {}).get("f1", 0.0)
+                r["leak_to"] = {c: int(sum(lanes["confusion"].get(c, {}).values()))
+                                for c in DRUM_CLASSES if c != cls}
         results["clean_stem"][part] = r
         print(f"  {part:<16} {r}")
 
@@ -283,12 +365,30 @@ def run(skip_demucs=False):
                     results["full_pipeline"][part] = r
                     print(f"  other stem vs {part:<14} {r}")
             if drum_parts and "drums" in stems:
-                pred = predict_onsets(stems["drums"])
-                gt_all = np.sort(np.concatenate([gts[p][0] for p in drum_parts]))
                 span = max(gts[p][2] for p in drum_parts)
-                r = eval_drums((gt_all, None, span), pred, bpm)
+                gt_all = np.sort(np.concatenate([gts[p][0] for p in drum_parts]))
+
+                # legacy union metric, kept so the number stays comparable to history
+                r = eval_drums((gt_all, None, span), predict_onsets(stems["drums"]), bpm)
                 results["full_pipeline"]["all drums (union)"] = r
                 print(f"  drum stem  vs all drums      {r}")
+
+                # the metric that can actually see the failure
+                gt_by_class = {}
+                for part in drum_parts:
+                    cls = drum_class_of(part)
+                    if cls:
+                        gt_by_class.setdefault(cls, []).append(gts[part][0])
+                gt_by_class = {c: np.sort(np.concatenate(v)) for c, v in gt_by_class.items()}
+                pred_by_class = {c: np.array([t for t, _ in hits])
+                                 for c, hits in transcribe_drums(stems["drums"]).items()}
+                r = eval_drums_per_class(gt_by_class, pred_by_class, bpm, span)
+                results["full_pipeline"]["drums (per class)"] = r
+                print(f"  drum stem  per-class macro F1 {r['macro_f1']}")
+                for cls, m in r["per_class"].items():
+                    print(f"     {cls:<6} P {m['precision']:.2f}  R {m['recall']:.2f}  "
+                          f"F1 {m['f1']:.2f}   ({m['n_pred']} pred / {m['n_gt']} gt)")
+                print(f"     confusion (predicted -> actual): {r['confusion']}")
 
     out = DATA_DIR / f"transcription_eval_{song['title'].replace(' ', '_')}.json"
     out.write_text(json.dumps(results, indent=1))

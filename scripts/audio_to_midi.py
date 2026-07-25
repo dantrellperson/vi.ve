@@ -55,7 +55,18 @@ CONFIG = {
     "frame_threshold": 0.45,   # Basic Pitch: pitch confidence per frame
     "min_note_len_ms": 60,     # drop blips shorter than this (keys-only would prefer 200)
     "min_amplitude_vel": 30,   # velocity floor for quietest kept note
-    "drum_onset_delta": 0.02,  # drum hit sensitivity (lower = more hits)
+    "drum_onset_delta": 0.02,  # legacy whole-stem onset sensitivity (harness union metric)
+    "drum_delta_k": 0.35,      # per-band peak threshold = median + k*(p95 - median)
+    "drum_band_floor": 0.04,   # band must carry this share of peak onset strength
+    # Band's share of onset energy required to claim a hit. Grid-searched against the
+    # harness's per-class macro F1 (data/drum_tuning_round_02.json): 0.65 -> 0.77.
+    # Chosen from the middle of a broad plateau, not its edge, so they travel.
+    "drum_share_kick": 0.40,
+    "drum_share_snare": 0.20,
+    "drum_share_hihat": 0.05,
+    "drum_gap_kick_ms": 80,    # minimum spacing per role — kills double-triggers
+    "drum_gap_snare_ms": 80,
+    "drum_gap_hihat_ms": 40,   # low enough to keep 32nd-note hat rolls
     "demucs_model": "htdemucs",
 }
 
@@ -74,6 +85,34 @@ def detect_bpm(y, sr):
     while bpm > 100:           # trap lives in halved-tempo land; fold 140 -> 70
         bpm /= 2
     return round(bpm * 2, 2) if bpm < 50 else round(bpm, 2)
+
+
+def refine_bpm(y, sr, coarse_bpm):
+    """Sharpen librosa's tempo estimate by fitting onsets to a 16th-note grid.
+
+    beat_track is only accurate to about 1%, which is invisible in a 4-bar loop and
+    fatal in a 40-bar pack: the error accumulates until the MIDI has slid a full 16th
+    away from the grid, so the pack starts in time and progressively drifts out.
+    Measured on the five loaded songs, correcting an error this small moved on-grid
+    alignment from 15-21% to 61-86% — Aye Tay was logged at 76.00 when it is 77.00.
+
+    Onsets are already the pipeline's most reliable signal, so pick the tempo that
+    puts the most of them on a 16th grid. Returns the coarse estimate unchanged when
+    there is too little evidence to improve on it.
+    """
+    onsets = librosa.onset.onset_detect(y=y, sr=sr, units="time", backtrack=True)
+    if len(onsets) < 32:
+        return coarse_bpm
+    phases = np.arange(0, 0.25, 0.01)
+    best_bpm, best_score = coarse_bpm, -1.0
+    for bpm in np.arange(coarse_bpm * 0.97, coarse_bpm * 1.03, coarse_bpm * 0.0002):
+        beats = onsets * bpm / 60.0
+        # distance to the nearest 16th, for every candidate phase at once
+        frac = ((beats[None, :] - phases[:, None]) * 4) % 1.0
+        score = np.minimum(frac, 1 - frac).__lt__(0.08).mean(axis=1).max()
+        if score > best_score:
+            best_bpm, best_score = float(bpm), float(score)
+    return round(best_bpm, 2)
 
 
 def detect_key(y, sr):
@@ -120,30 +159,86 @@ def transcribe_stem(wav_path):
     return sorted(notes)
 
 
+# Band edges (Hz) per drum role, contiguous so onset_strength_multi slices the mel
+# channels in one pass. The 1500-6000 channel is deliberately unclaimed: giving it to
+# the snare (a clap's crack lives there) was TESTED and made things worse — snare F1
+# 0.58 -> 0.47, because the band carries more hi-hat bleed than clap. Body only.
+DRUM_BAND_EDGES_HZ = [20, 150, 1500, 6000]
+DRUM_BAND_CHANNEL = {"kick": (0,), "snare": (1,), "hihat": (3,)}
+
+
 def transcribe_drums(wav_path):
-    """Onset detection + frequency-band classification -> kick/snare/hihat hits."""
+    """Per-band onset envelopes -> an INDEPENDENT detector per drum.
+
+    Replaces the original single-frame `if low / elif high / else` classifier, which
+    had three measured failures (see notebooks + CHANGELOG 2026-07-24):
+      1. One onset could only ever become ONE drum -> 0 co-hits across all three
+         test songs. Kick+hat and snare+hat land together constantly in trap, so
+         those hits were not misclassified, they were deleted.
+      2. The kick test `low(<150Hz) > 0.35` almost never fired, because Demucs
+         routes 808/sub energy to the BASS stem — 4 kicks in 43 bars on one song.
+         Everything fell through to the hat lane (16.6 hats/bar).
+      3. No minimum spacing -> one transient could fire twice (74% of one song's
+         hat intervals were shorter than a 32nd note).
+
+    Each band now peak-picks its own onset-strength envelope, so simultaneous hits
+    are representable; thresholds are drawn from the song's own envelope statistics
+    rather than fixed spectral fractions; `wait` enforces per-role minimum spacing.
+    """
+    return pick_drum_hits(drum_envelopes(wav_path))
+
+
+def drum_envelopes(wav_path):
+    """The expensive half of drum transcription: per-band + full-spectrum onset
+    strength. Split out so the tuner can compute it once and sweep thresholds."""
     y, sr = librosa.load(wav_path, sr=None, mono=True)
-    onsets = librosa.onset.onset_detect(y=y, sr=sr, units="time", backtrack=True,
-                                        delta=CONFIG["drum_onset_delta"])
-    hits = {"kick": [], "snare": [], "hihat": []}
-    n_fft = 2048
-    for t in onsets:
-        i = int(t * sr)
-        frame = y[i:i + n_fft]
-        if len(frame) < n_fft:
-            frame = np.pad(frame, (0, n_fft - len(frame)))
-        spec = np.abs(np.fft.rfft(frame * np.hanning(n_fft)))
-        freqs = np.fft.rfftfreq(n_fft, 1 / sr)
-        total = spec.sum() + 1e-9
-        low = spec[freqs < 150].sum() / total
-        high = spec[freqs > 4000].sum() / total
-        loud = float(np.sqrt((frame ** 2).mean()))
-        if low > 0.35:
-            hits["kick"].append((t, loud))
-        elif high > 0.30:
-            hits["hihat"].append((t, loud))
-        else:
-            hits["snare"].append((t, loud))
+    hop = 512
+    n_mels = 128
+    mel_f = librosa.mel_frequencies(n_mels=n_mels, fmin=0, fmax=sr / 2)
+    edges = [int(np.argmin(np.abs(mel_f - hz))) for hz in DRUM_BAND_EDGES_HZ] + [n_mels]
+    edges = sorted(set(edges))
+    envs = librosa.onset.onset_strength_multi(y=y, sr=sr, hop_length=hop,
+                                              channels=edges)
+    env_full = librosa.onset.onset_strength(y=y, sr=sr, hop_length=hop)
+    return {"envs": envs, "env_full": env_full, "sr": sr, "hop": hop}
+
+
+def pick_drum_hits(env_pack):
+    """The cheap half: CONFIG thresholds -> {role: [(time_s, loudness)]}."""
+    envs, env_full = env_pack["envs"], env_pack["env_full"]
+    sr, hop = env_pack["sr"], env_pack["hop"]
+    # Absolute reference: a band-local peak is only a real hit if the band actually
+    # carries energy. Without this gate, normalising a near-silent band turns its
+    # noise floor into "hits" — a solo kick bounce scored 3003 hi-hats before this.
+    floor = CONFIG["drum_band_floor"] * float(env_full.max())
+    # Every drum is broadband at its transient — a kick's body reaches into the snare
+    # band, a snare excites all four. Absolute energy alone therefore fires every lane
+    # on every hit (measured: kick precision 0.37). What separates the roles is which
+    # band is disproportionately excited, so gate on each band's SHARE of the onset
+    # energy at that instant. Simultaneity survives: a real kick+hat co-hit lifts the
+    # low and high shares together while the mid share stays put.
+    share_of = envs / (envs.sum(axis=0, keepdims=True) + 1e-9)
+
+    frame_ms = hop / sr * 1000
+    hits = {}
+    for role, chans in DRUM_BAND_CHANNEL.items():
+        chans = [c for c in chans if c < len(envs)]
+        if not chans:
+            hits[role] = []
+            continue
+        raw = envs[list(chans)].sum(axis=0)
+        share = share_of[list(chans)].sum(axis=0)
+        env = raw / (raw.max() + 1e-9)
+        med = float(np.median(env))
+        # threshold relative to this song's own dynamics, not an absolute fraction
+        delta = med + CONFIG["drum_delta_k"] * (float(np.percentile(env, 95)) - med)
+        wait = max(1, int(round(CONFIG[f"drum_gap_{role}_ms"] / frame_ms)))
+        peaks = librosa.util.peak_pick(env, pre_max=3, post_max=3, pre_avg=5,
+                                       post_avg=5, delta=delta, wait=wait)
+        peaks = [p for p in peaks
+                 if raw[p] >= floor and share[p] >= CONFIG[f"drum_share_{role}"]]
+        times = librosa.frames_to_time(np.array(peaks), sr=sr, hop_length=hop)
+        hits[role] = [(float(t), float(env[p])) for t, p in zip(times, peaks)]
     return hits
 
 
@@ -211,9 +306,11 @@ def process_song(audio_path, config=None):
     print(f"▶ {title}")
 
     y, sr = librosa.load(str(audio_path), mono=True)
-    bpm = detect_bpm(y, sr)
+    coarse = detect_bpm(y, sr)
+    bpm = refine_bpm(y, sr, coarse)
     key = detect_key(y, sr)
-    print(f"  detected key {key}, bpm {bpm}")
+    drift = "" if bpm == coarse else f"  (refined from {coarse:g}, {(bpm/coarse-1)*100:+.2f}%)"
+    print(f"  detected key {key}, bpm {bpm:g}{drift}")
 
     with tempfile.TemporaryDirectory() as td:
         print("  separating stems (Demucs — takes a few minutes per song on CPU)…")
